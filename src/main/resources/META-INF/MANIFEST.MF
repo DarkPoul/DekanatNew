@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: org.ioc.App
+Class-Path: -classpath "D:\IntelliJ IDEA Community Edition 2022.1.3\plug
+ ins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar; D:\IntelliJ IDE
+ A Community Edition 2022.1.3\plugins\maven\lib\maven3\boot\plexus-class
+ worlds.license"
+
