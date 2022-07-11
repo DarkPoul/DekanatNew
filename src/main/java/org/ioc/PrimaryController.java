@@ -7,6 +7,11 @@ public class PrimaryController {
 
     @FXML
     private void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
+        App.setRoot("gui/secondary");
     }
+    @FXML
+    private void switchToAut() throws IOException {
+        App.setRoot("gui/authentication");
+    }
+
 }

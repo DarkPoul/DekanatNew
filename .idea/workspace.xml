@@ -9,7 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="first" />
+    <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="first">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/authentication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/error_connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/MainWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/authentication.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/error_connection.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/PrimaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/SecondaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/SecondaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ioc/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/primary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ioc/secondary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/secondary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/DekanatNew-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/DekanatNew-1.0-shaded.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -40,17 +60,26 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/S_varog/IdeaProjects/DekanatNew/src/main/resources",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.37241378"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\resources\org\ioc\gui" />
+      <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\resources\org\ioc" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.ioc.controller" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JAR Application.DekanatNew-1.0-shaded.jar">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.ioc.Main" />
       <module name="DekanatNew" />
@@ -64,12 +93,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DekanatNew-1.0-shaded.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/DekanatNew-1.0-shaded.jar" />
+      <method v="2" />
+    </configuration>
     <configuration name="DekanatNew-1.0.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/DekanatNew-1.0.jar" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.DekanatNew-1.0-shaded.jar" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JAR Application.DekanatNew-1.0.jar" />
       </list>
