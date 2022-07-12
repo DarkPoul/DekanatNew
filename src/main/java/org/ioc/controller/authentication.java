@@ -7,24 +7,16 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.*;
-import org.ini4j.Ini;
+
 import org.ioc.App;
 import org.ioc.database.DataBase;
-
 
 public class authentication {
 
@@ -36,9 +28,6 @@ public class authentication {
 
     @FXML
     private Button Settings;
-
-    @FXML
-    private AnchorPane main;
 
     @FXML
     private PasswordField authentication_password;
@@ -59,10 +48,12 @@ public class authentication {
     void initialize() throws IOException {
 
 
-        @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
-        Ini Login_Dekanat_set = new Ini(new File("src/main/resources/org/ioc/property/Config.ini"));
-        String Login_Dekanat = Login_Dekanat_set.get("login", "login_Dekanat");
-        authentication_Login.setText(Login_Dekanat);
+//        @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
+//        Ini Login_Dekanat_set = new Ini(new File("src/main/resources/org/ioc/property/Config.ini"));
+//        String Login_Dekanat = Login_Dekanat_set.get("login", "login_Dekanat");
+//        authentication_Login.setText(Login_Dekanat);
+
+        authentication_Login.setText("");
 
         authentication_GO.setOnAction(actionEvent -> {
             try {
@@ -77,37 +68,37 @@ public class authentication {
             fileChooser.setTitle("Open Resource File");
             fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Ini Files", "*.ini"));
             File file = fileChooser.showOpenDialog(new Stage());
-            Ini ini = null;
-            try {
-                ini = new Ini(new File(String.valueOf(file)));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            assert ini != null;
-            String Login =  ini.get("login", "login");
-            String Password = ini.get("password", "password");
-            String Host = ini.get("host", "host");
-            String Login_Dekanat_getter = ini.get("login", "login_Dekanat");
-            try {
-                Ini update_properties = new Ini(new File("src/main/resources/org/ioc/property/Config.ini"));
-                update_properties.put("login", "login", Login);
-                update_properties.put("password", "password", Password);
-                update_properties.put("host", "host", Host);
-                update_properties.put("login", "login_Dekanat", Login_Dekanat_getter);
-                update_properties.store();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//            Ini ini = null;
+//            try {
+//                ini = new Ini(new File(String.valueOf(file)));
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//            assert ini != null;
+//            String Login =  ini.get("login", "login");
+//            String Password = ini.get("password", "password");
+//            String Host = ini.get("host", "host");
+//            String Login_Dekanat_getter = ini.get("login", "login_Dekanat");
+//            try {
+//                Ini update_properties = new Ini(new File("src/main/resources/org/ioc/property/Config.ini"));
+//                update_properties.put("login", "login", Login);
+//                update_properties.put("password", "password", Password);
+//                update_properties.put("host", "host", Host);
+//                update_properties.put("login", "login_Dekanat", Login_Dekanat_getter);
+//                update_properties.store();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
         });
     }
 
     public void Authentication_Button() throws IOException {
         Login = String.valueOf(authentication_Login.getText());
         Password = String.valueOf(authentication_password.getText());
-        Ini Login_Dekanat_set = new Ini(new File("src/main/resources/org/ioc/property/Config.ini"));
-        authentication_Login.setText(Login_Dekanat_set.get("login", "login_Dekanat"));
-        Login_Dekanat_set.put("login", "login_Dekanat", Login);
-        Login_Dekanat_set.store();
+//        Ini Login_Dekanat_set = new Ini(new File("src/main/resources/org/ioc/property/Config.ini"));
+//        authentication_Login.setText(Login_Dekanat_set.get("login", "login_Dekanat"));
+//        Login_Dekanat_set.put("login", "login_Dekanat", Login);
+//        Login_Dekanat_set.store();
 
         try {
             DataBase.Open_DB();

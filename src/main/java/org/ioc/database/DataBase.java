@@ -1,12 +1,12 @@
 package org.ioc.database;
 
 //Імпорт необхідних класів
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import org.ini4j.Ini;
-import org.ioc.App;
+//import javafx.fxml.FXMLLoader;
+//import javafx.scene.Scene;
+//import javafx.stage.Modality;
+//import javafx.stage.Stage;
+//import org.ini4j.Ini;
+//import org.ioc.App;
 import org.ioc.controller.authentication;
 
 import java.io.File;
@@ -50,13 +50,16 @@ public class DataBase extends authentication {//Головний клас під
     @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
     public static Connection getConnection() throws SQLException, IOException {
 
-        Ini properties = new Ini(new File("src/main/resources/org/ioc/property/Config.ini"));
+//        Ini properties = new Ini(new File("src/main/resources/org/ioc/property/Config.ini"));
+//
+//        String open_Login = properties.get("login", "login");
+//        String open_Password = properties.get("password", "password");
+//        String open_Host = properties.get("host", "host");
+//        String url = "jdbc:mysql://" + open_Host;
+        String url = "jdbc:mysql://212.111.203.181/Dekanat";
+        String open_Login = "admin";
+        String open_Password = "Darkpoul@1";
 
-        String open_Login = properties.get("login", "login");
-        String open_Password = properties.get("password", "password");
-        String open_Host = properties.get("host", "host");
-
-        String url = "jdbc:mysql://" + open_Host;
         return DriverManager.getConnection(url, open_Login, open_Password);
     }
 
