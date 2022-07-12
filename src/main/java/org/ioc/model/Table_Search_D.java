@@ -1,4 +1,4 @@
-package org.ioc.models;
+package org.ioc.model;
 
 public class Table_Search_D {
     String NameOfDisc;
