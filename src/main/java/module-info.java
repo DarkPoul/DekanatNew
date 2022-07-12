@@ -6,6 +6,6 @@ module org.ioc {
 
     opens org.ioc to javafx.fxml, javafx.graphics, java.sql;
     opens org.ioc.controller to javafx.fxml;
-    opens org.ioc.model to javafx.base;
+    opens org.ioc.model to javafx.base, javafx.fxml;
     exports org.ioc;
 }

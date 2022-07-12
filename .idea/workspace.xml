@@ -9,10 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="second">
+    <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcess_Advanced_Add.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcess_Advanced_Del.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Edu_Advanced_Disc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Edu_Advanced_Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/EduProcess_Advanced_Add.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/EduProcess_Advanced_Del.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_00__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_02__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_10__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_10__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcessCuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcessCuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/models/Table_Edu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Edu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/models/Table_Search_D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Search_D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/EduProcessCuration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/EduProcessCuration.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/authentication.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/authentication.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +68,8 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\java\org\ioc\controller" />
-      <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\java\org\ioc\database" />
       <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\resources\org\ioc\gui" />
+      <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\java\org\ioc\database" />
       <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\resources\org\ioc" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">

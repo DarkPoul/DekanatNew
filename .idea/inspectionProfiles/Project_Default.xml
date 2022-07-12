@@ -2,15 +2,7 @@
   <profile version="1.0">
     <option name="myName" value="Project Default" />
     <inspection_tool class="AutoCloseableResource" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="METHOD_MATCHER_CONFIG" value="java.util.Formatter,format,java.io.Writer,append,com.google.common.base.Preconditions,checkNotNull,org.hibernate.Session,close,java.io.PrintWriter,printf,java.io.PrintStream,printf,org.ioc.database.DataBase,Connection_Dekanat,java.sql.Connection,prepareStatement" />
-    </inspection_tool>
-    <inspection_tool class="MavenPackageUpdate" enabled="true" level="WEAK WARNING" enabled_by_default="true">
-      <option name="excludeList">
-        <list>
-          <option value="org.openjfx:javafx-controls" />
-          <option value="org.openjfx:javafx-fxml" />
-        </list>
-      </option>
+      <option name="METHOD_MATCHER_CONFIG" value="java.util.Formatter,format,java.io.Writer,append,com.google.common.base.Preconditions,checkNotNull,org.hibernate.Session,close,java.io.PrintWriter,printf,java.io.PrintStream,printf,org.ioc.database.DataBase,StudentsPIB|DiscID|StudentsInGroup|FacultyID|Spec_ID_For_Edu|EduProgramAndSpec|StudentsEdu|Disc|GroupName_SQL" />
     </inspection_tool>
   </profile>
 </component>

@@ -85,8 +85,6 @@ public class MainWindow {
         });
 //
         Registration_of_students.setOnAction(actionEvent -> {
-            Stage Directory = new Stage();
-            Directory.setTitle("Реєстрація зарахованих студентів");
             try {
                 App.setRoot("gui/Registration_of_enrolled_students");
             } catch (IOException e) {

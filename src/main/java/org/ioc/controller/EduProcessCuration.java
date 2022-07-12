@@ -15,6 +15,7 @@ import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.ioc.App;
 import org.ioc.database.DataBase;
 import org.ioc.model.Table_Edu;
 import org.ioc.model.Table_Search_D;
@@ -23,46 +24,28 @@ public class EduProcessCuration {
 
     @FXML
     private Button Button_Add_D;
-
     @FXML
     private Button Del_expansion;
-
     @FXML
     private Button Button_Diversity_For_Group;
-
     @FXML
     private Button Button_Remove_Discipline;
-
     @FXML
     private Button Button_Remove_For_Group;
-
     @FXML
     private Button diversity_expansion;
-
     @FXML
     private ChoiceBox<String> choose_session;
-
     @FXML
     private ComboBox<String> performance_choose_group;
-
     @FXML
     private TextField Search_Box;
-
-    @FXML
-    private Tab tab_curriculum;
-
     @FXML
     private ProgressIndicator progress_bar;
-
-
-
     @FXML
     private TableView<Table_Search_D> TableV_Search_D;
     @FXML
     private TableColumn<Table_Search_D, String> Table_C_Search_D;
-
-
-
     @FXML
     private TableView<Table_Edu> TableView_Disc;
     @FXML
@@ -121,6 +104,9 @@ public class EduProcessCuration {
 
     @FXML
     void initialize() throws SQLException {
+
+        Discipline_for_Edu.clear();
+
         plan_table_discipline.setCellValueFactory(new PropertyValueFactory<>("NameOfDiscipline"));
         plan_table_hours.setCellValueFactory(new PropertyValueFactory<>("HH"));
         plan_table_Zalik.setCellValueFactory(new PropertyValueFactory<>("Zalik"));
@@ -246,7 +232,7 @@ public class EduProcessCuration {
                         }
                         if (!Objects.equals(performance_choose_group.getValue(), "")){
                             int temp = 0;
-                            for (String s : GroupIdentification_List){
+                            for (String ignored : GroupIdentification_List){
                                 if (Objects.equals(GroupIdentification_List.get(temp), performance_choose_group.getValue())){
                                     GroupID = Group_ID_List.get(temp);
                                     break;
@@ -421,7 +407,7 @@ public class EduProcessCuration {
                                     }
                                     if (!Objects.equals(performance_choose_group.getValue(), "")){
                                         int temp = 0;
-                                        for (String s : GroupIdentification_List){
+                                        for (String ignored : GroupIdentification_List){
                                             if (Objects.equals(GroupIdentification_List.get(temp), performance_choose_group.getValue())){
                                                 GroupID = Group_ID_List.get(temp);
                                                 break;
@@ -559,19 +545,11 @@ public class EduProcessCuration {
             if (!(Disc.size() == 0) && !Objects.equals(performance_choose_group.getValue(), null)){
                 progress_bar.setVisible(true);
 //Створення вікна підтвердження
-//                Stage warning = new Stage();
-//                warning.setTitle("Рознесення для групи");
-//                warning.initModality(Modality.APPLICATION_MODAL);
+//
 //                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("warning.fxml"));
-//                Scene scene = null;
-//                try {
-//                    scene = new Scene(fxmlLoader.load(), 320, 100);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//                warning.setScene(scene);
+//
 //                warning.getIcons().add(new Image("warning.png"));
-//                warning.showAndWait();
+//
 
 
 //Всі студенти які є в групі
@@ -735,9 +713,7 @@ public class EduProcessCuration {
 
         });
 //Видалення дисципліни з моделі
-        Button_Remove_Discipline.setOnAction(actionEvent -> {
-            Disc.remove(TableView_Disc.getSelectionModel().getFocusedIndex());
-        });
+        Button_Remove_Discipline.setOnAction(actionEvent -> Disc.remove(TableView_Disc.getSelectionModel().getFocusedIndex()));
 
         Button_Remove_For_Group.setOnAction(actionEvent -> {
 
@@ -748,53 +724,26 @@ public class EduProcessCuration {
                 for (Table_Edu s : TableView_Disc.getItems()){
                     Discipline_for_Edu.add(Discipline_for_Edu.size(), s.getNameOfDiscipline());
                 }
-
-
-
-//                Stage warning = new Stage();
-//                warning.setTitle("Розширене рознесення");
-//                warning.initModality(Modality.APPLICATION_MODAL);
-//                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("EduProcess_Advanced_Controller_Add.fxml"));
-//                Scene scene = null;
-//                try {
-//                    scene = new Scene(fxmlLoader.load(), 800, 365);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//                warning.setScene(scene);
-//                warning.getIcons().add(new Image("warning.png"));
-//                warning.showAndWait();
+                try {
+                    App.setRoot("gui/EduProcess_Advanced_Add");
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
-
         });
-
 
         Del_expansion.setOnAction(actionEvent -> {
             if (Disc.size() != 0){
                 for (Table_Edu s : TableView_Disc.getItems()){
                     Discipline_for_Edu.add(Discipline_for_Edu.size(), s.getNameOfDiscipline());
                 }
-
-
-
-//                Stage warning = new Stage();
-//                warning.setTitle("Розширене вилучення");
-//                warning.initModality(Modality.APPLICATION_MODAL);
-//                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("EduProcess_Advanced_Controller_Del.fxml"));
-//                Scene scene = null;
-//                try {
-//                    scene = new Scene(fxmlLoader.load(), 800, 365);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//                warning.setScene(scene);
-//                warning.getIcons().add(new Image("warning.png"));
-//                warning.showAndWait();
+                try {
+                    App.setRoot("gui/EduProcess_Advanced_Del");
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
-
     }
-
-
 }
 
