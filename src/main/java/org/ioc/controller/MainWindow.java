@@ -84,18 +84,27 @@ public class MainWindow {
             }
         });
 //
-//        Registration_of_students.setOnAction(actionEvent -> {
-//            Stage Directory = new Stage();
-//            Directory.setTitle("Реєстрація зарахованих студентів");
+        Registration_of_students.setOnAction(actionEvent -> {
+            Stage Directory = new Stage();
+            Directory.setTitle("Реєстрація зарахованих студентів");
+            try {
+                App.setRoot("gui/Registration_of_enrolled_students");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+
+        });
 //
-//        });
-//
-//        Support_of_the_educational_process.setOnAction(ActionEvent -> {
-//            Stage Directory = new Stage();
-//            Directory.setTitle("Cупровід навчального процессу");
-//
-//        });
-//
+        Support_of_the_educational_process.setOnAction(ActionEvent -> {
+            try {
+                App.setRoot("gui/EduProcessCuration");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+        });
+
         Modular_control.setOnAction(ActionEvent -> {
             try {
                 App.setRoot("gui/Modular_results_preview");

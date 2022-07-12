@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Scene_Anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #a1d1a3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ioc.controller.Registration_of_enrolled_students">
+   <children>
+      <VBox alignment="CENTER" layoutX="50.0" prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <Button fx:id="CreateGroup_Button" mnemonicParsing="false" prefHeight="30.0" prefWidth="270.0" text="Створити групу">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="AddNewStudent_Button" mnemonicParsing="false" prefHeight="30.0" prefWidth="270.0" text="Додати нового студента">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="Diversification_of_students_into_groups" mnemonicParsing="false" prefHeight="30.0" prefWidth="270.0" text="Рознесення студентів по групам">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="Download_students_to_the_database" mnemonicParsing="false" prefHeight="30.0" prefWidth="270.0" text="Завантажити студентів до бази">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -7,6 +7,8 @@ package org.ioc.database;
 //import javafx.stage.Stage;
 //import org.ini4j.Ini;
 //import org.ioc.App;
+import org.ioc.controller.EduProcessCuration;
+import org.ioc.controller.Registration_of_enrolled_students;
 import org.ioc.controller.authentication;
 
 import java.io.File;
@@ -134,37 +136,37 @@ public class DataBase extends authentication {//Головний клас під
         return resultSet;
     }
 
-//    public void AnketaInsert() {//Створення методу для отримання даних з бази даних
-//        String query = "INSERT INTO AnketaOfStudents (IdFO, LastName_ukr, LastName_eng, FirstName_ukr, FirstName_eng, " +
-//                "Surname_ukr, Surname_eng, SpecialityId, YearOfEntery, StudentBook, IdentificationCode, " +
-//                "DateOfBirth, UkrainianCitizenship, SocialStatus, Sex, SeriesOfPassport, NumberOfPassport, IssuanceDateOfPassport, " +
-//                "FormOfTraining, ObtainingDegree, Financing, SeriesOfDocumentOfEducation, NumbersOfDocumentOfEducation, " +
-//                "NameOfDocumentOfEducation, NameOfEducationalInstitution)" +
-//                "VALUES ('" + Registration_of_enrolled_students_Controller.anketa_1 + "', '" + Registration_of_enrolled_students_Controller.anketa_2 + "', '" + Registration_of_enrolled_students_Controller.anketa_3 + "', '" + Registration_of_enrolled_students_Controller.anketa_4 + "', '" + Registration_of_enrolled_students_Controller.anketa_5 + "', '" +
-//                Registration_of_enrolled_students_Controller.anketa_6 + "', '" + Registration_of_enrolled_students_Controller.anketa_7 + "', '" + Registration_of_enrolled_students_Controller.anketa_8 + "', '" + Registration_of_enrolled_students_Controller.anketa_9  + "', '" + Registration_of_enrolled_students_Controller.anketa_11 + "', '" + Registration_of_enrolled_students_Controller.anketa_12 +
-//                "', '" + Registration_of_enrolled_students_Controller.anketa_13 + "', '" + Registration_of_enrolled_students_Controller.anketa_14 + "', '" + Registration_of_enrolled_students_Controller.anketa_15 + "', '" + Registration_of_enrolled_students_Controller.anketa_16 + "', '" + Registration_of_enrolled_students_Controller.anketa_18 + "', '" +
-//                Registration_of_enrolled_students_Controller.anketa_19 + "', '" + Registration_of_enrolled_students_Controller.anketa_20 + "', '" + Registration_of_enrolled_students_Controller.anketa_21 + "', '" + Registration_of_enrolled_students_Controller.anketa_22 + "', '" + Registration_of_enrolled_students_Controller.anketa_27 + "', '" + Registration_of_enrolled_students_Controller.anketa_28 +
-//                "', '" + Registration_of_enrolled_students_Controller.anketa_29 + "', '" + Registration_of_enrolled_students_Controller.anketa_30 + "', '" + Registration_of_enrolled_students_Controller.anketa_31 +"')";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            prSt.executeUpdate();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//    }
-//    public ResultSet Spec_ID() throws SQLException {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet = null;
-//        String query = "SELECT SpecialityId FROM Speciality WHERE KodOfSpeciality = '" + Registration_of_enrolled_students_Controller.Anketa_8_Name + "'";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        assert resultSet != null;
-//
-//        return resultSet;
-//    }
+    public void AnketaInsert() {//Створення методу для отримання даних з бази даних
+        String query = "INSERT INTO AnketaOfStudents (IdFO, LastName_ukr, LastName_eng, FirstName_ukr, FirstName_eng, " +
+                "Surname_ukr, Surname_eng, SpecialityId, YearOfEntery, StudentBook, IdentificationCode, " +
+                "DateOfBirth, UkrainianCitizenship, SocialStatus, Sex, SeriesOfPassport, NumberOfPassport, IssuanceDateOfPassport, " +
+                "FormOfTraining, ObtainingDegree, Financing, SeriesOfDocumentOfEducation, NumbersOfDocumentOfEducation, " +
+                "NameOfDocumentOfEducation, NameOfEducationalInstitution)" +
+                "VALUES ('" + Registration_of_enrolled_students.anketa_1 + "', '" + Registration_of_enrolled_students.anketa_2 + "', '" + Registration_of_enrolled_students.anketa_3 + "', '" + Registration_of_enrolled_students.anketa_4 + "', '" + Registration_of_enrolled_students.anketa_5 + "', '" +
+                Registration_of_enrolled_students.anketa_6 + "', '" + Registration_of_enrolled_students.anketa_7 + "', '" + Registration_of_enrolled_students.anketa_8 + "', '" + Registration_of_enrolled_students.anketa_9  + "', '" + Registration_of_enrolled_students.anketa_11 + "', '" + Registration_of_enrolled_students.anketa_12 +
+                "', '" + Registration_of_enrolled_students.anketa_13 + "', '" + Registration_of_enrolled_students.anketa_14 + "', '" + Registration_of_enrolled_students.anketa_15 + "', '" + Registration_of_enrolled_students.anketa_16 + "', '" + Registration_of_enrolled_students.anketa_18 + "', '" +
+                Registration_of_enrolled_students.anketa_19 + "', '" + Registration_of_enrolled_students.anketa_20 + "', '" + Registration_of_enrolled_students.anketa_21 + "', '" + Registration_of_enrolled_students.anketa_22 + "', '" + Registration_of_enrolled_students.anketa_27 + "', '" + Registration_of_enrolled_students.anketa_28 +
+                "', '" + Registration_of_enrolled_students.anketa_29 + "', '" + Registration_of_enrolled_students.anketa_30 + "', '" + Registration_of_enrolled_students.anketa_31 +"')";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            prSt.executeUpdate();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+    public ResultSet Spec_ID() throws SQLException {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet = null;
+        String query = "SELECT SpecialityId FROM Speciality WHERE KodOfSpeciality = '" + Registration_of_enrolled_students.Anketa_8_Name + "'";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        assert resultSet != null;
+
+        return resultSet;
+    }
 //
 //    public ResultSet ShortNameOfGroup() {//Створення методу для отримання даних з бази даних
 //        ResultSet resultSet = null;
@@ -215,17 +217,17 @@ public class DataBase extends authentication {//Головний клас під
 //        }
 //    }
 //
-//    public ResultSet GroupName_SQL() {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet = null;
-//        String query = "SELECT NameOfGroup, NumberOfCourse, NumberOfGroup, YearOfGroup, GroupId FROM GroupOfStudents, EducationalProgram, Speciality WHERE GroupId > '1' AND IdOfEducationalProgram = EducationalProgramId AND IdOfSpeciality = SpecialityId AND FacultyID = '" + Id_User + "' ORDER BY NameOfGroup";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
+    public ResultSet GroupName_SQL() {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet = null;
+        String query = "SELECT NameOfGroup, NumberOfCourse, NumberOfGroup, YearOfGroup, GroupId FROM GroupOfStudents, EducationalProgram, Speciality WHERE GroupId > '1' AND IdOfEducationalProgram = EducationalProgramId AND IdOfSpeciality = SpecialityId AND FacultyID = '" + Id_User + "' ORDER BY NameOfGroup";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
 //
 //    public ResultSet Bring_the_student() {//Створення методу для отримання даних з бази даних
 //        ResultSet resultSet = null;
@@ -346,177 +348,177 @@ public class DataBase extends authentication {//Головний клас під
 //        return resultSet;
 //    }
 //
-//    public ResultSet Disc() {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet = null;
-//        String query = "SELECT NameOfDiscipline_ukr FROM Discipline";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
+    public ResultSet Disc() {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet = null;
+        String query = "SELECT NameOfDiscipline_ukr FROM Discipline";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
 //
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    /////////////                   Запит на отримання ID студентів за номером групи                    ////////////////
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//    public ResultSet StudentsInGroup() {
-//        ResultSet resultSet = null;
-//        String query = "SELECT IdFO FROM Dekanat.AnketaOfStudents where GroupID = '" + EduProcessCuration_Controller.GroupID + "'";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
+    public ResultSet StudentsInGroup() {
+        ResultSet resultSet = null;
+        String query = "SELECT IdFO FROM Dekanat.AnketaOfStudents where GroupID = '" + EduProcessCuration.GroupID + "'";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
 //
 //
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    /////////////                             Запит на отримання ID дисципліни                          ////////////////
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//    public ResultSet DiscID() {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet = null;
-//        String query = "SELECT DisciplineId FROM Discipline WHERE NameOfDiscipline_ukr = '" + EduProcessCuration_Controller.NameOfDisc_SQL + "'";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
+    public ResultSet DiscID() {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet = null;
+        String query = "SELECT DisciplineId FROM Discipline WHERE NameOfDiscipline_ukr = '" + EduProcessCuration.NameOfDisc_SQL + "'";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
 //
-//    public ResultSet EduProgramAndSpec() {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet = null;
-//        String query = "SELECT IdOfEducationalProgram FROM GroupOfStudents WHERE GroupId = '" + EduProcessCuration_Controller.GroupID + "'";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
+    public ResultSet EduProgramAndSpec() {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet = null;
+        String query = "SELECT IdOfEducationalProgram FROM GroupOfStudents WHERE GroupId = '" + EduProcessCuration.GroupID + "'";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
 //
-//    public ResultSet Spec_ID_For_Edu() {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet = null;
-//        String query = "SELECT IdOfSpeciality FROM EducationalProgram WHERE EducationalProgramId = '" + EduProcessCuration_Controller.IdEduProgram + "'";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
+    public ResultSet Spec_ID_For_Edu() {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet = null;
+        String query = "SELECT IdOfSpeciality FROM EducationalProgram WHERE EducationalProgramId = '" + EduProcessCuration.IdEduProgram + "'";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
 //
-//    public ResultSet FacultyID() {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet = null;
-//        String query = "SELECT FacultyID FROM Speciality WHERE SpecialityId = '" + EduProcessCuration_Controller.IdSpec + "'";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
+    public ResultSet FacultyID() {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet = null;
+        String query = "SELECT FacultyID FROM Speciality WHERE SpecialityId = '" + EduProcessCuration.IdSpec + "'";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
 //
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    /////////////              Запит на внесення навчального плану без ргр у базу даних                 ////////////////
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//    public void Study_plan_Insert_null_RGR() {
-//        String query = "INSERT INTO EducationalPlan (FacultyId, EducationalProgramId, IdOfStudent, NumberOfSemester, DisciplineId, " +
-//                "Hours, Test, Exam, CalculationGraphicWork, Coursework, CourseProject, DifferentiatedTest, Uni_Cod, NumberOfDepartment)" +
-//                "VALUES ('" + EduProcessCuration_Controller.IdFaculty + "', '" + EduProcessCuration_Controller.IdEduProgram + "', '" + EduProcessCuration_Controller.StudentFO + "', '" + EduProcessCuration_Controller.NumberOfSession + "', '" + EduProcessCuration_Controller.DisciplineIdSql + "', '" +
-//                EduProcessCuration_Controller.Hours + "', '" + EduProcessCuration_Controller.Test + "', '" + EduProcessCuration_Controller.Exam + "', '" + EduProcessCuration_Controller.CGW + "', '" + EduProcessCuration_Controller.CW + "', '" + EduProcessCuration_Controller.CP + "', '" + EduProcessCuration_Controller.Dif_Test + "', '"+ EduProcessCuration_Controller.Uni_cod +"', '" + EduProcessCuration_Controller.Kafedra + "')";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            prSt.executeUpdate();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//    }
+    public void Study_plan_Insert_null_RGR() {
+        String query = "INSERT INTO EducationalPlan (FacultyId, EducationalProgramId, IdOfStudent, NumberOfSemester, DisciplineId, " +
+                "Hours, Test, Exam, CalculationGraphicWork, Coursework, CourseProject, DifferentiatedTest, Uni_Cod, NumberOfDepartment)" +
+                "VALUES ('" + EduProcessCuration.IdFaculty + "', '" + EduProcessCuration.IdEduProgram + "', '" + EduProcessCuration.StudentFO + "', '" + EduProcessCuration.NumberOfSession + "', '" + EduProcessCuration.DisciplineIdSql + "', '" +
+                EduProcessCuration.Hours + "', '" + EduProcessCuration.Test + "', '" + EduProcessCuration.Exam + "', '" + EduProcessCuration.CGW + "', '" + EduProcessCuration.CW + "', '" + EduProcessCuration.CP + "', '" + EduProcessCuration.Dif_Test + "', '"+ EduProcessCuration.Uni_cod +"', '" + EduProcessCuration.Kafedra + "')";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            prSt.executeUpdate();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 //
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    /////////////               Запит на внесення навчального плану з 4 ргр у базу даних                ////////////////
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//    public void Study_plan_Insert_four_RGR() {
-//        String query = "INSERT INTO EducationalPlan (FacultyId, EducationalProgramId, IdOfStudent, NumberOfSemester, DisciplineId, " +
-//                "Hours, Test, Exam, CalculationGraphicWork, CalculationGraphicWork_1, CalculationGraphicWork_2, CalculationGraphicWork_3, CalculationGraphicWork_4, " +
-//                "Coursework, CourseProject, DifferentiatedTest, Uni_Cod, NumberOfDepartment)" +
-//                "VALUES ('" + EduProcessCuration_Controller.IdFaculty + "', '" + EduProcessCuration_Controller.IdEduProgram + "', '" + EduProcessCuration_Controller.StudentFO + "', '" + EduProcessCuration_Controller.NumberOfSession + "', '" + EduProcessCuration_Controller.DisciplineIdSql + "', '" +
-//                EduProcessCuration_Controller.Hours + "', '" + EduProcessCuration_Controller.Test + "', '" + EduProcessCuration_Controller.Exam + "', '" + EduProcessCuration_Controller.CGW + "', '"+ EduProcessCuration_Controller.CGW_1 +"', '" + EduProcessCuration_Controller.CGW_2 +"', '"+ EduProcessCuration_Controller.CGW_3 +
-//                "', '"+ EduProcessCuration_Controller.CGW_4 +"', '" + EduProcessCuration_Controller.CW + "', '" + EduProcessCuration_Controller.CP + "', '" + EduProcessCuration_Controller.Dif_Test + "', '"+ EduProcessCuration_Controller.Uni_cod +"', '" + EduProcessCuration_Controller.Kafedra + "')";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            prSt.executeUpdate();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//    }
+    public void Study_plan_Insert_four_RGR() {
+        String query = "INSERT INTO EducationalPlan (FacultyId, EducationalProgramId, IdOfStudent, NumberOfSemester, DisciplineId, " +
+                "Hours, Test, Exam, CalculationGraphicWork, CalculationGraphicWork_1, CalculationGraphicWork_2, CalculationGraphicWork_3, CalculationGraphicWork_4, " +
+                "Coursework, CourseProject, DifferentiatedTest, Uni_Cod, NumberOfDepartment)" +
+                "VALUES ('" + EduProcessCuration.IdFaculty + "', '" + EduProcessCuration.IdEduProgram + "', '" + EduProcessCuration.StudentFO + "', '" + EduProcessCuration.NumberOfSession + "', '" + EduProcessCuration.DisciplineIdSql + "', '" +
+                EduProcessCuration.Hours + "', '" + EduProcessCuration.Test + "', '" + EduProcessCuration.Exam + "', '" + EduProcessCuration.CGW + "', '"+ EduProcessCuration.CGW_1 +"', '" + EduProcessCuration.CGW_2 +"', '"+ EduProcessCuration.CGW_3 +
+                "', '"+ EduProcessCuration.CGW_4 +"', '" + EduProcessCuration.CW + "', '" + EduProcessCuration.CP + "', '" + EduProcessCuration.Dif_Test + "', '"+ EduProcessCuration.Uni_cod +"', '" + EduProcessCuration.Kafedra + "')";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            prSt.executeUpdate();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 //
 //
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    /////////////               Запит на внесення навчального плану з 6 ргр у базу даних                ////////////////
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//    public void Study_plan_Insert_six_RGR() throws SQLException, IOException {
-//        String query = "INSERT INTO EducationalPlan (FacultyId, EducationalProgramId, IdOfStudent, NumberOfSemester, DisciplineId, " +
-//                "Hours, Test, Exam, CalculationGraphicWork, CalculationGraphicWork_1, CalculationGraphicWork_2, CalculationGraphicWork_3, CalculationGraphicWork_4, CalculationGraphicWork_5, CalculationGraphicWork_6," +
-//                "Coursework, CourseProject, DifferentiatedTest, Uni_Cod, NumberOfDepartment)" +
-//                "VALUES ('" + EduProcessCuration_Controller.IdFaculty + "', '" + EduProcessCuration_Controller.IdEduProgram + "', '" + EduProcessCuration_Controller.StudentFO + "', '" + EduProcessCuration_Controller.NumberOfSession + "', '" + EduProcessCuration_Controller.DisciplineIdSql + "', '" +
-//                EduProcessCuration_Controller.Hours + "', '" + EduProcessCuration_Controller.Test + "', '" + EduProcessCuration_Controller.Exam + "', '" + EduProcessCuration_Controller.CGW + "', '"+ EduProcessCuration_Controller.CGW_1 +"', '" + EduProcessCuration_Controller.CGW_2 +"', '"+ EduProcessCuration_Controller.CGW_3 +"', '"+ EduProcessCuration_Controller.CGW_4 +"', '"+ EduProcessCuration_Controller.CGW_5 +"', '"+ EduProcessCuration_Controller.CGW_6 +"', '" + EduProcessCuration_Controller.CW + "', '" + EduProcessCuration_Controller.CP + "', '" + EduProcessCuration_Controller.Dif_Test + "', '"+ EduProcessCuration_Controller.Uni_cod +"', '" + EduProcessCuration_Controller.Kafedra + "')";//SQL запит на отримання інформації
-//        String query_2 = "UPDATE EducationalPlan (FacultyId, EducationalProgramId, IdOfStudent, NumberOfSemester, DisciplineId, " +
-//                "Hours, Test, Exam, CalculationGraphicWork, CalculationGraphicWork_1, CalculationGraphicWork_2, CalculationGraphicWork_3, CalculationGraphicWork_4, CalculationGraphicWork_5, CalculationGraphicWork_6," +
-//                "Coursework, CourseProject, DifferentiatedTest, Uni_Cod, NumberOfDepartment)" +
-//                "VALUES ('" + EduProcessCuration_Controller.IdFaculty + "', '" + EduProcessCuration_Controller.IdEduProgram + "', '" + EduProcessCuration_Controller.StudentFO + "', '" + EduProcessCuration_Controller.NumberOfSession + "', '" + EduProcessCuration_Controller.DisciplineIdSql + "', '" +
-//                EduProcessCuration_Controller.Hours + "', '" + EduProcessCuration_Controller.Test + "', '" + EduProcessCuration_Controller.Exam + "', '" + EduProcessCuration_Controller.CGW + "', '"+ EduProcessCuration_Controller.CGW_1 +"', '" + EduProcessCuration_Controller.CGW_2 +"', '"+ EduProcessCuration_Controller.CGW_3 +"', '"+ EduProcessCuration_Controller.CGW_4 +"', '"+ EduProcessCuration_Controller.CGW_5 +"', '"+ EduProcessCuration_Controller.CGW_6 +"', '" + EduProcessCuration_Controller.CW + "', '" + EduProcessCuration_Controller.CP + "', '" + EduProcessCuration_Controller.Dif_Test + "', '"+ EduProcessCuration_Controller.Uni_cod +"', '" + EduProcessCuration_Controller.Kafedra + "')";//SQL запит на отримання інформації
-//
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            prSt.executeUpdate();
-//        } catch (SQLException | IOException throwables) {
-//            PreparedStatement prSt = getConnection().prepareStatement(query_2);
-//            prSt.executeUpdate();
-//            throwables.printStackTrace();
-//        }
-//    }
+    public void Study_plan_Insert_six_RGR() throws SQLException, IOException {
+        String query = "INSERT INTO EducationalPlan (FacultyId, EducationalProgramId, IdOfStudent, NumberOfSemester, DisciplineId, " +
+                "Hours, Test, Exam, CalculationGraphicWork, CalculationGraphicWork_1, CalculationGraphicWork_2, CalculationGraphicWork_3, CalculationGraphicWork_4, CalculationGraphicWork_5, CalculationGraphicWork_6," +
+                "Coursework, CourseProject, DifferentiatedTest, Uni_Cod, NumberOfDepartment)" +
+                "VALUES ('" + EduProcessCuration.IdFaculty + "', '" + EduProcessCuration.IdEduProgram + "', '" + EduProcessCuration.StudentFO + "', '" + EduProcessCuration.NumberOfSession + "', '" + EduProcessCuration.DisciplineIdSql + "', '" +
+                EduProcessCuration.Hours + "', '" + EduProcessCuration.Test + "', '" + EduProcessCuration.Exam + "', '" + EduProcessCuration.CGW + "', '"+ EduProcessCuration.CGW_1 +"', '" + EduProcessCuration.CGW_2 +"', '"+ EduProcessCuration.CGW_3 +"', '"+ EduProcessCuration.CGW_4 +"', '"+ EduProcessCuration.CGW_5 +"', '"+ EduProcessCuration.CGW_6 +"', '" + EduProcessCuration.CW + "', '" + EduProcessCuration.CP + "', '" + EduProcessCuration.Dif_Test + "', '"+ EduProcessCuration.Uni_cod +"', '" + EduProcessCuration.Kafedra + "')";//SQL запит на отримання інформації
+        String query_2 = "UPDATE EducationalPlan (FacultyId, EducationalProgramId, IdOfStudent, NumberOfSemester, DisciplineId, " +
+                "Hours, Test, Exam, CalculationGraphicWork, CalculationGraphicWork_1, CalculationGraphicWork_2, CalculationGraphicWork_3, CalculationGraphicWork_4, CalculationGraphicWork_5, CalculationGraphicWork_6," +
+                "Coursework, CourseProject, DifferentiatedTest, Uni_Cod, NumberOfDepartment)" +
+                "VALUES ('" + EduProcessCuration.IdFaculty + "', '" + EduProcessCuration.IdEduProgram + "', '" + EduProcessCuration.StudentFO + "', '" + EduProcessCuration.NumberOfSession + "', '" + EduProcessCuration.DisciplineIdSql + "', '" +
+                EduProcessCuration.Hours + "', '" + EduProcessCuration.Test + "', '" + EduProcessCuration.Exam + "', '" + EduProcessCuration.CGW + "', '"+ EduProcessCuration.CGW_1 +"', '" + EduProcessCuration.CGW_2 +"', '"+ EduProcessCuration.CGW_3 +"', '"+ EduProcessCuration.CGW_4 +"', '"+ EduProcessCuration.CGW_5 +"', '"+ EduProcessCuration.CGW_6 +"', '" + EduProcessCuration.CW + "', '" + EduProcessCuration.CP + "', '" + EduProcessCuration.Dif_Test + "', '"+ EduProcessCuration.Uni_cod +"', '" + EduProcessCuration.Kafedra + "')";//SQL запит на отримання інформації
+
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            prSt.executeUpdate();
+        } catch (SQLException | IOException throwables) {
+            PreparedStatement prSt = getConnection().prepareStatement(query_2);
+            prSt.executeUpdate();
+            throwables.printStackTrace();
+        }
+    }
 //
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    /////////////                   Запит на отримання ID студентів за номером групи                    ////////////////
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//    public ResultSet StudentsPIB() {
-//        ResultSet resultSet = null;
-//        String query = "SELECT LastName_ukr, FirstName_ukr, Surname_ukr, IdFO FROM AnketaOfStudents where GroupID = '" + EduProcessCuration_Controller.GroupID + "' ORDER BY LastName_ukr";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
+    public ResultSet StudentsPIB() {
+        ResultSet resultSet = null;
+        String query = "SELECT LastName_ukr, FirstName_ukr, Surname_ukr, IdFO FROM AnketaOfStudents where GroupID = '" + EduProcessCuration.GroupID + "' ORDER BY LastName_ukr";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
 //
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    /////////////                  Запит на отримання навчального плану N-го студента                   ////////////////
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//    public ResultSet StudentsEdu() {
-//        ResultSet resultSet = null;
-//        String query = "SELECT NameOfDiscipline_ukr, Hours, Test, Exam, CalculationGraphicWork, CalculationGraphicWork_1, CalculationGraphicWork_2, CalculationGraphicWork_3, CalculationGraphicWork_4, CalculationGraphicWork_5, CalculationGraphicWork_6, Coursework, CourseProject, DifferentiatedTest, NumberOfDepartment FROM EducationalPlan, Discipline where IdOfStudent = '" + EduProcessCuration_Controller.StudentFO +"' and NumberOfSemester ='" + EduProcessCuration_Controller.NumberOfSession + "'and Discipline.DisciplineId = EducationalPlan.DisciplineId";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
+    public ResultSet StudentsEdu() {
+        ResultSet resultSet = null;
+        String query = "SELECT NameOfDiscipline_ukr, Hours, Test, Exam, CalculationGraphicWork, CalculationGraphicWork_1, CalculationGraphicWork_2, CalculationGraphicWork_3, CalculationGraphicWork_4, CalculationGraphicWork_5, CalculationGraphicWork_6, Coursework, CourseProject, DifferentiatedTest, NumberOfDepartment FROM EducationalPlan, Discipline where IdOfStudent = '" + EduProcessCuration.StudentFO +"' and NumberOfSemester ='" + EduProcessCuration.NumberOfSession + "'and Discipline.DisciplineId = EducationalPlan.DisciplineId";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
 //
 //    public void AddStudent() {
 //        String query = "INSERT INTO AnketaOfStudents VALUES " + Controller_Add_Student.ID_FO +  ", " + Controller_Add_Student.sur_name_ukr + ", " + Controller_Add_Student.sur_name_eng
