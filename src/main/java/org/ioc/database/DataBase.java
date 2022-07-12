@@ -74,66 +74,66 @@ public class DataBase extends authentication {//Головний клас під
         }
         return resultSet;
     }
-//    public ResultSet Directory_Info_Department() {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet = null;
-//        String query = "SELECT DepartmentId, NameOfDepartment FROM Department";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
-//
-//    public ResultSet Directory_Info_Faculty() {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet2 = null;
-//        String query = "SELECT NameOfFaculty, AbriviaturaOfFaculty_ukr FROM Faculty";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt2 = getConnection().prepareStatement(query);
-//            resultSet2 = prSt2.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet2;
-//    }
-//
-//    public ResultSet Directory_Info_Discipline() {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet = null;
-//        String query = "SELECT DepartmentId, DisciplineId, NameOfDiscipline_ukr FROM Discipline";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
-//
-//    public ResultSet Directory_Info_Speciality() {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet = null;
-//        String query = "SELECT KodOfSpeciality, NameOfSpeciality FROM Speciality";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
-//
-//    public ResultSet Directory_Info_Education() {//Створення методу для отримання даних з бази даних
-//        ResultSet resultSet = null;
-//        String query = "SELECT NameOfEducationalProgram, ShortNameOfEducationalProgram, Qualification FROM EducationalProgram";//SQL запит на отримання інформації
-//        try {
-//            PreparedStatement prSt = getConnection().prepareStatement(query);
-//            resultSet = prSt.executeQuery();
-//        } catch (SQLException | IOException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return resultSet;
-//    }
-//
+    public ResultSet Directory_Info_Department() {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet = null;
+        String query = "SELECT DepartmentId, NameOfDepartment FROM Department";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
+
+    public ResultSet Directory_Info_Faculty() {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet2 = null;
+        String query = "SELECT NameOfFaculty, AbriviaturaOfFaculty_ukr FROM Faculty";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt2 = getConnection().prepareStatement(query);
+            resultSet2 = prSt2.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet2;
+    }
+
+    public ResultSet Directory_Info_Discipline() {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet = null;
+        String query = "SELECT DepartmentId, DisciplineId, NameOfDiscipline_ukr FROM Discipline";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
+
+    public ResultSet Directory_Info_Speciality() {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet = null;
+        String query = "SELECT KodOfSpeciality, NameOfSpeciality FROM Speciality";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
+
+    public ResultSet Directory_Info_Education() {//Створення методу для отримання даних з бази даних
+        ResultSet resultSet = null;
+        String query = "SELECT NameOfEducationalProgram, ShortNameOfEducationalProgram, Qualification FROM EducationalProgram";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
+
 //    public void AnketaInsert() {//Створення методу для отримання даних з бази даних
 //        String query = "INSERT INTO AnketaOfStudents (IdFO, LastName_ukr, LastName_eng, FirstName_ukr, FirstName_eng, " +
 //                "Surname_ukr, Surname_eng, SpecialityId, YearOfEntery, StudentBook, IdentificationCode, " +

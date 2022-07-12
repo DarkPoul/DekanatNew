@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #a1d1a3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ioc.controller.Directory">
+   <children>
+      <TabPane prefHeight="768.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="department_Directory" style="fx-font-famile: Arial Black; -fx-font-size: 12.4; -fx-font-weight: Bold;" text="Довідник каведр">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Table_Department" prefHeight="740.0" prefWidth="1024.0">
+                          <columns>
+                            <TableColumn fx:id="Number_of_Chair" prefWidth="93.0" text="№ Кафедри" />
+                            <TableColumn fx:id="Name_Of_Chair" prefWidth="930.0" text="Назва кафедри" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="disciplines_Directory" style="fx-font-famile: Arial Black; -fx-font-size: 12.4; -fx-font-weight: Bold;" text="Довідник дисциплін">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Table_Discipline" layoutY="122.0" prefHeight="617.0" prefWidth="1024.0">
+                          <columns>
+                            <TableColumn fx:id="NumberOfDepartment" prefWidth="110.0" text="№ кафедри" />
+                            <TableColumn fx:id="NumberOfDiscipline" prefWidth="112.0" text="№ дисципліни" />
+                              <TableColumn fx:id="FulNameOfDiscipline" prefWidth="801.0" text="Повна назва дисципліни" />
+                          </columns>
+                        </TableView>
+                        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="90.0" prefWidth="497.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="197.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Пошук по кафедрі">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Пошук по дисципліні" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="SearchDepartment" editable="true" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" />
+                              <ComboBox fx:id="SearchDiscipline" editable="true" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="specialities_Directory" style="fx-font-famile: Arial Black; -fx-font-size: 12.4; -fx-font-weight: Bold;" text="Довідник спеціальностей">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Table_Speciality" prefHeight="740.0" prefWidth="1024.0">
+                          <columns>
+                              <TableColumn fx:id="NumberOfSpeciality" prefWidth="152.0" text="Код спеціальності" />
+                              <TableColumn fx:id="NameOfSpeciality" prefWidth="687.0" text="Назва спеціальності" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="faculty_Directory" style="fx-font-famile: Arial Black; -fx-font-size: 12.4; -fx-font-weight: Bold;" text="Довідник факультетів">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Table_Faculty" prefHeight="740.0" prefWidth="1024.0">
+                          <columns>
+                            <TableColumn fx:id="Abbreviation_Faculty" minWidth="0.0" prefWidth="181.0" text="Абрівіатура" />
+                            <TableColumn fx:id="Name_Faculty" prefWidth="630.0" style="-fx-font-size: 14;" text="Назва" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="educational_programs_Directory" style="fx-font-famile: Arial Black; -fx-font-size: 12.4; -fx-font-weight: Bold;" text="Довідник освтніх програм">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Table_Eduction" prefHeight="740.0" prefWidth="1024.0">
+                           <columns>
+                              <TableColumn fx:id="NameOfEducationProgram" prefWidth="453.0" text="Назва освітньої програми" />
+                              <TableColumn fx:id="ShortName" minWidth="0.0" prefWidth="141.0" text="Коротка назва" />
+                              <TableColumn fx:id="NameOfQualification" prefWidth="129.0" text="Ступінь освіти" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

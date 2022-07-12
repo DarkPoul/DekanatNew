@@ -1,0 +1,188 @@
+Index: src/main/java/org/ioc/controller/MainWindow.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.ioc.controller;\r\n\r\n//import java.io.IOException;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\n//import javafx.fxml.FXMLLoader;\r\n//import javafx.scene.Scene;\r\nimport javafx.scene.control.Button;\r\n//import javafx.scene.control.Label;\r\n//import javafx.scene.image.Image;\r\n//import javafx.scene.layout.AnchorPane;\r\n//import javafx.stage.Modality;\r\nimport javafx.stage.Stage;\r\n\r\n\r\npublic class MainWindow {\r\n\r\n\r\n//    @FXML\r\n//    private Button Registration_of_students;\r\n//\r\n//    @FXML\r\n//    private Button Support_of_the_educational_process;\r\n//\r\n//    @FXML\r\n//    private Button Making_changes_and_transferring_to_the_course;\r\n//\r\n//    @FXML\r\n//    private Button View_and_print_information;\r\n//\r\n//    @FXML\r\n//    private Button Visiting;\r\n//\r\n//    @FXML\r\n//    private Button Modular_control;\r\n//\r\n//    @FXML\r\n//    private Button Directory;\r\n//\r\n//    @FXML\r\n//    private Label Dekanat_name;\r\n//\r\n//    @FXML\r\n//    private Button Info;\r\n//\r\n//    @FXML\r\n//    private AnchorPane MainWindow_anchor;\r\n\r\n    @FXML\r\n    void handleCloseButtonAction(ActionEvent event) {\r\n        ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();\r\n    }\r\n\r\n\r\n\r\n    @FXML\r\n    void initialize() {\r\n//        Dekanat_name.setText(Controller_authentication.Name_dekanat);\r\n\r\n//        Info.setOnAction(ActionEvent -> {\r\n//            Stage Info = new Stage();\r\n//            Info.setTitle(\"Про розробників\");\r\n//\r\n//        });\r\n//\r\n//        Directory.setOnAction(ActionEvent -> {\r\n//            Stage Directory = new Stage();\r\n//            Directory.setTitle(\"Довідник\");\r\n//\r\n//        });\r\n//\r\n//        Making_changes_and_transferring_to_the_course.setOnAction(ActionEvent -> {\r\n//            Stage Directory = new Stage();\r\n//            Directory.setTitle(\"Внесення змін та переведення на курс\");\r\n//\r\n//        });\r\n//\r\n//        Registration_of_students.setOnAction(actionEvent -> {\r\n//            Stage Directory = new Stage();\r\n//            Directory.setTitle(\"Реєстрація зарахованих студентів\");\r\n//\r\n//        });\r\n//\r\n//        Support_of_the_educational_process.setOnAction(ActionEvent -> {\r\n//            Stage Directory = new Stage();\r\n//            Directory.setTitle(\"Cупровід навчального процессу\");\r\n//\r\n//        });\r\n//\r\n//        Modular_control.setOnAction(ActionEvent -> {\r\n//            Stage Directory = new Stage();\r\n//            Directory.setTitle(\"Перегляд результатів модульного контролю\");\r\n//\r\n//        });\r\n//\r\n//        View_and_print_information.setOnAction(ActionEvent -> {\r\n//            Stage Directory = new Stage();\r\n//            Directory.setTitle(\"Перегляд та друк інформації\");\r\n//\r\n//        });\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/ioc/controller/MainWindow.java b/src/main/java/org/ioc/controller/MainWindow.java
+--- a/src/main/java/org/ioc/controller/MainWindow.java	(revision 53f7ecd3dce14c707c8cbcf71d60ba125841d358)
++++ b/src/main/java/org/ioc/controller/MainWindow.java	(date 1657624253181)
+@@ -1,50 +1,50 @@
+ package org.ioc.controller;
+ 
+-//import java.io.IOException;
++import java.io.IOException;
+ import javafx.event.ActionEvent;
+ import javafx.fxml.FXML;
+-//import javafx.fxml.FXMLLoader;
+-//import javafx.scene.Scene;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Scene;
+ import javafx.scene.control.Button;
+-//import javafx.scene.control.Label;
+-//import javafx.scene.image.Image;
+-//import javafx.scene.layout.AnchorPane;
+-//import javafx.stage.Modality;
++import javafx.scene.control.Label;
++import javafx.scene.image.Image;
++import javafx.scene.layout.AnchorPane;
++import javafx.stage.Modality;
+ import javafx.stage.Stage;
+ 
+ 
+ public class MainWindow {
+ 
+ 
+-//    @FXML
+-//    private Button Registration_of_students;
+-//
+-//    @FXML
+-//    private Button Support_of_the_educational_process;
+-//
+-//    @FXML
+-//    private Button Making_changes_and_transferring_to_the_course;
+-//
+-//    @FXML
+-//    private Button View_and_print_information;
+-//
+-//    @FXML
+-//    private Button Visiting;
+-//
+-//    @FXML
+-//    private Button Modular_control;
+-//
+-//    @FXML
+-//    private Button Directory;
+-//
+-//    @FXML
+-//    private Label Dekanat_name;
+-//
+-//    @FXML
+-//    private Button Info;
+-//
+-//    @FXML
+-//    private AnchorPane MainWindow_anchor;
++    @FXML
++    private Button Registration_of_students;
++
++    @FXML
++    private Button Support_of_the_educational_process;
++
++    @FXML
++    private Button Making_changes_and_transferring_to_the_course;
++
++    @FXML
++    private Button View_and_print_information;
++
++    @FXML
++    private Button Visiting;
++
++    @FXML
++    private Button Modular_control;
++
++    @FXML
++    private Button Directory;
++
++    @FXML
++    private Label Dekanat_name;
++
++    @FXML
++    private Button Info;
++
++    @FXML
++    private AnchorPane MainWindow_anchor;
+ 
+     @FXML
+     void handleCloseButtonAction(ActionEvent event) {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"Dekanat\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"2af9ea4d-b5aa-462f-aaf0-4ebbde398a22\" name=\"Changes\" comment=\"second\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/gui/test.fxml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/Error_back.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/Error_up.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/ask.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/document.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/document_edit.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/exit.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/info.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/logo.ico\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/logo.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/pencil.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/people.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/print.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/settings.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/image/warning.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/property/Config.ini\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/dependency-reduced-pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/dependency-reduced-pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/module-info.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/module-info.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/ioc/PrimaryController.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/ioc/SecondaryController.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/ioc/controller/authentication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/ioc/controller/authentication.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/ioc/controller/error_connection.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/ioc/controller/error_connection.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/ioc/controller/test.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/org/ioc/gui/error_connection.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/org/ioc/gui/error_connection.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/DekanatNew-1.0-shaded.jar\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/DekanatNew-1.0-shaded.jar\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Bl9vu8FrBhtDetg4N2lGg3Hc8n\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/S_varog/IdeaProjects/DekanatNew/src/main/resources&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.37241378&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\S_varog\\IdeaProjects\\DekanatNew\\src\\main\\java\\org\\ioc\\controller\" />\r\n      <recent name=\"C:\\Users\\S_varog\\IdeaProjects\\DekanatNew\\src\\main\\java\\org\\ioc\\database\" />\r\n      <recent name=\"C:\\Users\\S_varog\\IdeaProjects\\DekanatNew\\src\\main\\resources\\org\\ioc\\gui\" />\r\n      <recent name=\"C:\\Users\\S_varog\\IdeaProjects\\DekanatNew\\src\\main\\resources\\org\\ioc\" />\r\n    </key>\r\n    <key name=\"ExtractSuperBase.RECENT_KEYS\">\r\n      <recent name=\"org.ioc.controller\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunAnythingCache\">\r\n    <option name=\"myCommands\">\r\n      <command value=\"mvn install\" />\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Main\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.ioc.Main\" />\r\n      <module name=\"DekanatNew\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.ioc.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"DekanatNew-1.0-shaded.jar\" type=\"JarApplication\" temporary=\"true\">\r\n      <option name=\"JAR_PATH\" value=\"$PROJECT_DIR$/target/DekanatNew-1.0-shaded.jar\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"DekanatNew-1.0.jar\" type=\"JarApplication\" temporary=\"true\">\r\n      <option name=\"JAR_PATH\" value=\"$PROJECT_DIR$/target/DekanatNew-1.0.jar\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"JAR Application.DekanatNew-1.0-shaded.jar\" />\r\n        <item itemvalue=\"JAR Application.DekanatNew-1.0.jar\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"2af9ea4d-b5aa-462f-aaf0-4ebbde398a22\" name=\"Changes\" comment=\"\" />\r\n      <created>1657470040464</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1657470040464</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first\">\r\n      <created>1657482313004</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1657482313004</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"second\">\r\n      <created>1657542460918</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1657542460918</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"first\" />\r\n    <MESSAGE value=\"second\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"second\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 53f7ecd3dce14c707c8cbcf71d60ba125841d358)
++++ b/.idea/workspace.xml	(date 1657624130873)
+@@ -9,37 +9,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="second">
+-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/test.fxml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/Error_back.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/Error_up.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/ask.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/document.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/document_edit.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/exit.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/info.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/logo.ico" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/logo.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/pencil.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/people.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/print.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/settings.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/warning.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/property/Config.ini" afterDir="false" />
++    <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="first">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/PrimaryController.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/SecondaryController.java" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/authentication.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/error_connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/error_connection.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/test.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/error_connection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/error_connection.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/DekanatNew-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/DekanatNew-1.0-shaded.jar" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -67,17 +39,21 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/S_varog/IdeaProjects/DekanatNew/src/main/resources&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.37241378&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "last_opened_file_path": "C:/Users/S_varog/IdeaProjects/DekanatNew/src/main/resources",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "project.structure.last.edited": "Project",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.37241378"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\java\org\ioc\controller" />
+@@ -149,6 +125,9 @@
+     </task>
+     <option name="localTasksCounter" value="3" />
+     <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">

@@ -10,8 +10,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="second">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_00_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_00_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_00__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_02_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_02__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_10_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_10__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Directory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Making_changes_and_transferring_to_the_course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Modular_results_preview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/about_developers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/view_and_print.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Discipline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Education.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Faculty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Speciality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/About_developers.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/Directory.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/Making_changes_and_transferring_to_the_course.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/Modular_results_preview.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/view_and_print.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/authentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,28 +61,35 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Bl9vu8FrBhtDetg4N2lGg3Hc8n" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/S_varog/IdeaProjects/DekanatNew/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.37241378&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Fujijaka3/IdeaProjects/DekanatNew/src/main/resources/org/ioc/gui",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.37241378"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fujijaka3\IdeaProjects\DekanatNew\src\main\resources\org\ioc\gui" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Fujijaka3\IdeaProjects\DekanatNew\src\main\resources\org\ioc\gui" />
+      <recent name="C:\Users\Fujijaka3\IdeaProjects\DekanatNew\src\main\java\org\ioc\model" />
       <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\java\org\ioc\controller" />
       <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\java\org\ioc\database" />
       <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\resources\org\ioc\gui" />
-      <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\resources\org\ioc" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="org.ioc.controller" />
@@ -119,14 +153,7 @@
       <option name="project" value="LOCAL" />
       <updated>1657542460918</updated>
     </task>
-    <task id="LOCAL-00003" summary="second">
-      <created>1657623627379</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1657623627379</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
