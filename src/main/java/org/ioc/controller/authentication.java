@@ -53,7 +53,7 @@ public class authentication {
 //        String Login_Dekanat = Login_Dekanat_set.get("login", "login_Dekanat");
 //        authentication_Login.setText(Login_Dekanat);
 
-        authentication_Login.setText("");
+        authentication_Login.setText("dekanat_TT");
 
         authentication_GO.setOnAction(actionEvent -> {
             try {

@@ -10,36 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="second">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/test.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/Error_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/Error_up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/ask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/document.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/document_edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/exit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/logo.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/pencil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/people.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/print.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/settings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/image/warning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/property/Config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/PrimaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/SecondaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/authentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/error_connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/error_connection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/error_connection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/error_connection.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/DekanatNew-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/DekanatNew-1.0-shaded.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657542460918</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="second">
+      <created>1657623627379</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657623627379</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
