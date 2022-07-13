@@ -9,30 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="12/07/2022 Evhenii">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Creating_group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Diversification_of_students_by_groups.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Entering_estimates_from_the_information.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Student_Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Students_with_debts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/add_student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/for_next_course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Group_Name.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Bring_Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/Creating_group.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/Diversification_of_students_by_groups.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/Entering_estimates_from_the_information.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/Student_Сard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/Students_with_debts.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/add_student.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/for_next_course.fxml" afterDir="false" />
+    <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcess_Advanced_Add.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcess_Advanced_Del.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Edu_Advanced_Disc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Edu_Advanced_Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/EduProcess_Advanced_Add.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/EduProcess_Advanced_Del.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_00__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_02__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_10__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_14_10__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Directory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Making_changes_and_transferring_to_the_course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Making_changes_and_transferring_to_the_course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Registration_of_enrolled_students.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/Registration_of_enrolled_students.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Discipline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/model/Table_Discipline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/Directory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/Directory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcessCuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcessCuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/EduProcessCuration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/EduProcessCuration.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/authentication.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/authentication.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +43,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Bl9vu8FrBhtDetg4N2lGg3Hc8n" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -67,23 +59,18 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Fujijaka3/IdeaProjects/DekanatNew/src/main/resources/org/ioc/gui&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/S_varog/IdeaProjects/DekanatNew/src/main/resources&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.37241378&quot;
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Fujijaka3\IdeaProjects\DekanatNew\src\main\resources\org\ioc\gui" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Fujijaka3\IdeaProjects\DekanatNew\src\main\resources\org\ioc\gui" />
-      <recent name="C:\Users\Fujijaka3\IdeaProjects\DekanatNew\src\main\java\org\ioc\model" />
       <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\java\org\ioc\controller" />
-      <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\java\org\ioc\database" />
       <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\resources\org\ioc\gui" />
+      <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\java\org\ioc\database" />
+      <recent name="C:\Users\S_varog\IdeaProjects\DekanatNew\src\main\resources\org\ioc" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="org.ioc.controller" />
@@ -147,7 +134,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657542460918</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="second">
+      <created>1657623627379</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657623627379</updated>
+    </task>
+    <task id="LOCAL-00004" summary="second">
+      <created>1657631142104</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657631142105</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
