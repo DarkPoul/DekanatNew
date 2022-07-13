@@ -8,12 +8,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.ioc.App;
 import org.ioc.database.DataBase;
+import org.ioc.model.Table_Edu;
 import org.ioc.model.Table_Edu_Advanced_Disc;
 import org.ioc.model.Table_Edu_Advanced_Student;
 
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
+
+import static org.ioc.controller.EduProcessCuration.*;
 
 
 public class EduProcess_Advanced_Del {
@@ -47,6 +52,14 @@ public class EduProcess_Advanced_Del {
     private static boolean temp = false;
     private static boolean temp2 = false;
 
+    public static String P = "";
+    public static String I = "";
+    public static String B = "";
+
+    public static String ID_FO;
+    public static String ID_Disc;
+    public static String ID_Sem;
+
     @FXML
     void initialize() throws SQLException {
 
@@ -62,9 +75,6 @@ public class EduProcess_Advanced_Del {
         ResultSet PIB_Students_RS = DB.StudentsPIB();
         ObservableList<Table_Edu_Advanced_Student> Student = FXCollections.observableArrayList();
 
-        String P_Student_Short;
-        String I_Student_Short;
-        String B_Student_Short;
         String PIB;
 
         while (true) {//Запускаємо цикл на обробку даних отриманих з бази даних
@@ -75,17 +85,14 @@ public class EduProcess_Advanced_Del {
                 throwables.printStackTrace();
             }
             try {
-                P_Student_Short = PIB_Students_RS.getString("LastName_ukr");
-                I_Student_Short = PIB_Students_RS.getString("FirstName_ukr").substring(0,1);
-                B_Student_Short = PIB_Students_RS.getString("Surname_ukr").substring(0,1);
-                PIB = P_Student_Short + " " + I_Student_Short + "." + B_Student_Short + ".";
+                PIB = PIB_Students_RS.getString("LastName_ukr") + " " + PIB_Students_RS.getString("FirstName_ukr") + " " + PIB_Students_RS.getString("Surname_ukr");
                 Student.add(new Table_Edu_Advanced_Student(PIB));
 
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
             ObservableList<Table_Edu_Advanced_Disc> Disc = FXCollections.observableArrayList();
-            for (int n = 0; EduProcessCuration.Discipline_for_Edu.size() > n; n++){
+            for (int n = 0; EduProcessCuration.Discipline_for_Edu.size() > n; n++) {
                 Disc.add(new Table_Edu_Advanced_Disc(EduProcessCuration.Discipline_for_Edu.get(n)));
             }
 
@@ -93,16 +100,15 @@ public class EduProcess_Advanced_Del {
             ListOfDisc_Advanced.setItems(Disc);
 
 
-
             Button_SelectAllStudent.setOnAction(ActiveEvent -> {
-                if (!temp){
-                    for (Table_Edu_Advanced_Student s :Student){
+                if (!temp) {
+                    for (Table_Edu_Advanced_Student s : Student) {
                         s.getStudent_Check().setSelected(true);
                     }
                     Button_SelectAllStudent.setText("Зняти з усіх студентів");
                     temp = true;
                 } else {
-                    for (Table_Edu_Advanced_Student s :Student){
+                    for (Table_Edu_Advanced_Student s : Student) {
                         s.getStudent_Check().setSelected(false);
                     }
                     Button_SelectAllStudent.setText("Вибрати всіх студентів");
@@ -111,14 +117,14 @@ public class EduProcess_Advanced_Del {
 
             });
             Button_SelectAllDisc.setOnAction(ActiveEvent -> {
-                if (!temp2){
-                    for (Table_Edu_Advanced_Disc s :Disc){
+                if (!temp2) {
+                    for (Table_Edu_Advanced_Disc s : Disc) {
                         s.getDisc_CheckBox().setSelected(true);
                     }
                     Button_SelectAllDisc.setText("Зняти усі дисципліни");
                     temp2 = true;
                 } else {
-                    for (Table_Edu_Advanced_Disc s :Disc){
+                    for (Table_Edu_Advanced_Disc s : Disc) {
                         s.getDisc_CheckBox().setSelected(false);
                     }
                     Button_SelectAllDisc.setText("Вибрати всі дисципліни");
@@ -128,8 +134,88 @@ public class EduProcess_Advanced_Del {
         }
     }
 
-    public void divers() throws IOException {
+    public void divers() throws IOException, SQLException {
+        System.out.println(NumberOfSession);
+        System.out.println(GroupID);
+
         App.setRoot("gui/EduProcessCuration");
+        ObservableList<String> Student = FXCollections.observableArrayList();
+        DataBase db = new DataBase();
+        ResultSet PIB_Students_RS = db.StudentsPIB();
+        String PIB;
+        while (true) {//Запускаємо цикл на обробку даних отриманих з бази даних
+
+            try {
+                if (!PIB_Students_RS.next()) break;
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+            try {
+                PIB = PIB_Students_RS.getString("LastName_ukr") + " " + PIB_Students_RS.getString("FirstName_ukr") + " " + PIB_Students_RS.getString("Surname_ukr");
+                if (!Student.contains(PIB)) {
+                    Student.add(PIB);
+                }
+
+
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+
+        }
+        ObservableList<String> ID = FXCollections.observableArrayList();
+        for (String student : Student) {
+            P = student.split(" ")[0];
+            I = student.split(" ")[1];
+            B = student.split(" ")[2];
+
+
+            String id_fo;
+            ResultSet id_fo_rs = db.StudentID();
+            while (true) {//Запускаємо цикл на обробку даних отриманих з бази даних
+
+                try {
+                    if (!id_fo_rs.next()) break;
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+                try {
+                    id_fo = id_fo_rs.getString("IdFO");
+                    ID.add(id_fo);
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+        ObservableList<Table_Edu_Advanced_Disc> Disc = ListOfDisc_Advanced.getItems();
+        List<String> DiscIdForSql = new LinkedList<>();
+        for (Table_Edu_Advanced_Disc s : Disc) {
+            NameOfDisc_SQL = s.getDisc_String();
+            ResultSet IdOfDisc = db.DiscID();
+            try {
+                if (!IdOfDisc.next()) break;
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+            String str11 = null;
+            try {
+                str11 = IdOfDisc.getString("DisciplineId");
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+            DiscIdForSql.add(0, str11);
+            System.out.println(str11);
+        }
+
+        for (String student : ID){
+            ID_FO = student;
+            ID_Sem =NumberOfSession;
+            for (String s : DiscIdForSql) {
+                ID_Disc = s;
+                db.InsertIntoTable();
+                db.DeleteIntoTable();
+            }
+        }
+
 
     }
 }

@@ -7,7 +7,10 @@ package org.ioc.database;
 //import javafx.stage.Stage;
 //import org.ini4j.Ini;
 //import org.ioc.App;
-import org.ioc.controller.*;
+import org.ioc.controller.EduProcessCuration;
+import org.ioc.controller.EduProcess_Advanced_Del;
+import org.ioc.controller.Registration_of_enrolled_students;
+import org.ioc.controller.authentication;
 
 import java.io.File;
 import java.io.IOException;
@@ -166,55 +169,55 @@ public class DataBase extends authentication {//Головний клас під
         return resultSet;
     }
 //
-    public ResultSet ShortNameOfGroup() {//Створення методу для отримання даних з бази даних
-        ResultSet resultSet = null;
-        String query = "SELECT ShortNameOfEducationalProgram FROM EducationalProgram WHERE Qualification = '" + Creating_group.DegreeName + "' and IdOfSpeciality = '" + Creating_group.N + "'";//SQL запит на отримання інформації
-        try {
-            PreparedStatement prSt = getConnection().prepareStatement(query);
-            resultSet = prSt.executeQuery();
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
-        }
-        return resultSet;
-    }
-
-    public ResultSet FullNameAndIdOfGroup() {//Створення методу для отримання даних з бази даних
-        ResultSet resultSet = null;
-        String query = "SELECT NameOfEducationalProgram, EducationalProgramId FROM EducationalProgram WHERE ShortNameOfEducationalProgram = '" + Creating_group.GroupName_SQL + "'";//SQL запит на отримання інформації
-        try {
-            PreparedStatement prSt = getConnection().prepareStatement(query);
-            resultSet = prSt.executeQuery();
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
-        }
-        return resultSet;
-    }
-
-    public ResultSet SpecialityOfFaculty() {//Створення методу для отримання даних з бази даних
-        ResultSet resultSet = null;
-        String query = "SELECT SpecialityId, NameOfSpeciality FROM Speciality WHERE FacultyID = '" + Id_User + "'";//SQL запит на отримання інформації
-        try {
-            PreparedStatement prSt = getConnection().prepareStatement(query);
-            resultSet = prSt.executeQuery();
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
-        }
-        return resultSet;
-    }
-
-    public void GroupInsert() {//Створення методу для отримання даних з бази даних
-        String query = "INSERT INTO GroupOfStudents (FullNameOfGroup, NameOfGroup, NumberOfCourse, NumberOfGroup, YearOfGroup, " +
-                "College, IdOfEducationalProgram)" +
-                "VALUES ('" + Creating_group.GroupNameFull_SQL + "', '" + Creating_group.GroupName_SQL + "', '" + Creating_group.NumberOfCourse_SQL + "', '" + Creating_group.NumberOfGroup_SQL + "', '" + Creating_group.YearOfGroup_SQL + "', '" +
-                Creating_group.College_SQL + "', '" + Creating_group.GroupID_SQL + "')";//SQL запит на отримання інформації
-        try {
-            PreparedStatement prSt = getConnection().prepareStatement(query);
-            prSt.executeUpdate();
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
-        }
-    }
-
+//    public ResultSet ShortNameOfGroup() {//Створення методу для отримання даних з бази даних
+//        ResultSet resultSet = null;
+//        String query = "SELECT ShortNameOfEducationalProgram FROM EducationalProgram WHERE Qualification = '" + Create_Group_Controller.DegreeName + "' and IdOfSpeciality = '" + Create_Group_Controller.N + "'";//SQL запит на отримання інформації
+//        try {
+//            PreparedStatement prSt = getConnection().prepareStatement(query);
+//            resultSet = prSt.executeQuery();
+//        } catch (SQLException | IOException throwables) {
+//            throwables.printStackTrace();
+//        }
+//        return resultSet;
+//    }
+//
+//    public ResultSet FullNameAndIdOfGroup() {//Створення методу для отримання даних з бази даних
+//        ResultSet resultSet = null;
+//        String query = "SELECT NameOfEducationalProgram, EducationalProgramId FROM EducationalProgram WHERE ShortNameOfEducationalProgram = '" + Create_Group_Controller.GroupName_SQL + "'";//SQL запит на отримання інформації
+//        try {
+//            PreparedStatement prSt = getConnection().prepareStatement(query);
+//            resultSet = prSt.executeQuery();
+//        } catch (SQLException | IOException throwables) {
+//            throwables.printStackTrace();
+//        }
+//        return resultSet;
+//    }
+//
+//    public ResultSet SpecialityOfFaculty() {//Створення методу для отримання даних з бази даних
+//        ResultSet resultSet = null;
+//        String query = "SELECT SpecialityId, NameOfSpeciality FROM Speciality WHERE FacultyID = '" + Id_User + "'";//SQL запит на отримання інформації
+//        try {
+//            PreparedStatement prSt = getConnection().prepareStatement(query);
+//            resultSet = prSt.executeQuery();
+//        } catch (SQLException | IOException throwables) {
+//            throwables.printStackTrace();
+//        }
+//        return resultSet;
+//    }
+//
+//    public void GroupInsert() {//Створення методу для отримання даних з бази даних
+//        String query = "INSERT INTO GroupOfStudents (FullNameOfGroup, NameOfGroup, NumberOfCourse, NumberOfGroup, YearOfGroup, " +
+//                "College, IdOfEducationalProgram)" +
+//                "VALUES ('" + Create_Group_Controller.GroupNameFull_SQL + "', '" + Create_Group_Controller.GroupName_SQL + "', '" + Create_Group_Controller.NumberOfCourse_SQL + "', '" + Create_Group_Controller.NumberOfGroup_SQL + "', '" + Create_Group_Controller.YearOfGroup_SQL + "', '" +
+//                Create_Group_Controller.College_SQL + "', '" + Create_Group_Controller.GroupID_SQL + "')";//SQL запит на отримання інформації
+//        try {
+//            PreparedStatement prSt = getConnection().prepareStatement(query);
+//            prSt.executeUpdate();
+//        } catch (SQLException | IOException throwables) {
+//            throwables.printStackTrace();
+//        }
+//    }
+//
     public ResultSet GroupName_SQL() {//Створення методу для отримання даних з бази даних
         ResultSet resultSet = null;
         String query = "SELECT NameOfGroup, NumberOfCourse, NumberOfGroup, YearOfGroup, GroupId FROM GroupOfStudents, EducationalProgram, Speciality WHERE GroupId > '1' AND IdOfEducationalProgram = EducationalProgramId AND IdOfSpeciality = SpecialityId AND FacultyID = '" + Id_User + "' ORDER BY NameOfGroup";//SQL запит на отримання інформації
@@ -227,41 +230,41 @@ public class DataBase extends authentication {//Головний клас під
         return resultSet;
     }
 //
-    public ResultSet Bring_the_student() {//Створення методу для отримання даних з бази даних
-        ResultSet resultSet = null;
-        String query = "SELECT IdFO, LastName_ukr, FirstName_ukr, Surname_ukr, GroupID FROM AnketaOfStudents WHERE ObtainingDegree = '"+ Diversification_of_students_by_groups.degree_panel_SQL+
-                "' and FormOfTraining = '"+ Diversification_of_students_by_groups.FormOfStudy_SQL+"' and SpecialityId = '"+ Diversification_of_students_by_groups.Spec_ID_Name_SQL+"' and YearOfEntery = '"+ Diversification_of_students_by_groups.Year_of_entry_SQL+"' and GroupID = '1'";//SQL запит на отримання інформації
-        try {
-            PreparedStatement prSt = getConnection().prepareStatement(query);
-            resultSet = prSt.executeQuery();
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
-        }
-        return resultSet;
-    }
+//    public ResultSet Bring_the_student() {//Створення методу для отримання даних з бази даних
+//        ResultSet resultSet = null;
+//        String query = "SELECT IdFO, LastName_ukr, FirstName_ukr, Surname_ukr, GroupID FROM AnketaOfStudents WHERE ObtainingDegree = '"+ Diversification_of_students_by_groups.degree_panel_SQL+
+//                "' and FormOfTraining = '"+ Diversification_of_students_by_groups.FormOfStudy_SQL+"' and SpecialityId = '"+ Diversification_of_students_by_groups.Spec_ID_Name_SQL+"' and YearOfEntery = '"+ Diversification_of_students_by_groups.Year_of_entry_SQL+"' and GroupID = '1'";//SQL запит на отримання інформації
+//        try {
+//            PreparedStatement prSt = getConnection().prepareStatement(query);
+//            resultSet = prSt.executeQuery();
+//        } catch (SQLException | IOException throwables) {
+//            throwables.printStackTrace();
+//        }
+//        return resultSet;
+//    }
 //
-    public ResultSet Group_ID() {//Створення методу для отримання даних з бази даних
-        ResultSet resultSet = null;
-        String query = "SELECT GroupId FROM GroupOfStudents WHERE NameOfGroup = '"+ Diversification_of_students_by_groups.NameGroup_SQL +
-                "' and NumberOfCourse = '"+ Diversification_of_students_by_groups.NumberCourse_SQL +"' and NumberOfGroup = '"+ Diversification_of_students_by_groups.NumberGroup_SQL +"' and YearOfGroup = '"+ Diversification_of_students_by_groups.YearGroup_SQL +"' ";//SQL запит на отримання інформації
-        try {
-            PreparedStatement prSt = getConnection().prepareStatement(query);
-            resultSet = prSt.executeQuery();
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
-        }
-        return resultSet;
-    }
-
-    public void BringStudentToDB() {//Створення методу для отримання даних з бази даних
-        String query = "UPDATE AnketaOfStudents SET GroupID = '" + Diversification_of_students_by_groups.GroupID +"' WHERE IdFO = '" + Diversification_of_students_by_groups.ID_FO_ForSql+ "'";//SQL запит на отримання інформації
-        try {
-            PreparedStatement prSt = getConnection().prepareStatement(query);
-            prSt.executeUpdate();
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
-        }
-    }
+//    public ResultSet Group_ID() {//Створення методу для отримання даних з бази даних
+//        ResultSet resultSet = null;
+//        String query = "SELECT GroupId FROM GroupOfStudents WHERE NameOfGroup = '"+ Diversification_of_students_by_groups.NameGroup_SQL +
+//                "' and NumberOfCourse = '"+ Diversification_of_students_by_groups.NumberCourse_SQL +"' and NumberOfGroup = '"+ Diversification_of_students_by_groups.NumberGroup_SQL +"' and YearOfGroup = '"+ Diversification_of_students_by_groups.YearGroup_SQL +"' ";//SQL запит на отримання інформації
+//        try {
+//            PreparedStatement prSt = getConnection().prepareStatement(query);
+//            resultSet = prSt.executeQuery();
+//        } catch (SQLException | IOException throwables) {
+//            throwables.printStackTrace();
+//        }
+//        return resultSet;
+//    }
+//
+//    public void BringStudentToDB() {//Створення методу для отримання даних з бази даних
+//        String query = "UPDATE AnketaOfStudents SET GroupID = '" + Diversification_of_students_by_groups.GroupID +"' WHERE IdFO = '" + Diversification_of_students_by_groups.ID_FO_ForSql+ "'";//SQL запит на отримання інформації
+//        try {
+//            PreparedStatement prSt = getConnection().prepareStatement(query);
+//            prSt.executeUpdate();
+//        } catch (SQLException | IOException throwables) {
+//            throwables.printStackTrace();
+//        }
+//    }
 ///*
 //
 //
@@ -306,45 +309,45 @@ public class DataBase extends authentication {//Головний клас під
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    /////////////                   Запит на отримання номеру групи для StudentCard                     ////////////////
 //    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public ResultSet Group_ID_StudentCard() {//Створення методу для отримання даних з бази даних
-        ResultSet resultSet = null;
-        String query = "SELECT GroupId FROM GroupOfStudents WHERE NameOfGroup = '"+ Student_Card.GroupName[0] +
-                "' and NumberOfCourse = '"+ Student_Card.GroupName[1] +"' and NumberOfGroup = '"+ Student_Card.GroupName[2] +"' and YearOfGroup = '"+ Student_Card.GroupName[3] +"' ";//SQL запит на отримання інформації
-        try {
-            PreparedStatement prSt = getConnection().prepareStatement(query);
-            resultSet = prSt.executeQuery();
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
-        }
-        return resultSet;
-    }
+//    public ResultSet Group_ID_StudentCard() {//Створення методу для отримання даних з бази даних
+//        ResultSet resultSet = null;
+//        String query = "SELECT GroupId FROM GroupOfStudents WHERE NameOfGroup = '"+ Studentcard_Controller.GroupName[0] +
+//                "' and NumberOfCourse = '"+ Studentcard_Controller.GroupName[1] +"' and NumberOfGroup = '"+ Studentcard_Controller.GroupName[2] +"' and YearOfGroup = '"+ Studentcard_Controller.GroupName[3] +"' ";//SQL запит на отримання інформації
+//        try {
+//            PreparedStatement prSt = getConnection().prepareStatement(query);
+//            resultSet = prSt.executeQuery();
+//        } catch (SQLException | IOException throwables) {
+//            throwables.printStackTrace();
+//        }
+//        return resultSet;
+//    }
 //
 //
-    public ResultSet StudentsPIB_2() {
-        ResultSet resultSet = null;
-        String query = "SELECT LastName_ukr, FirstName_ukr, Surname_ukr, IdFO FROM AnketaOfStudents where GroupID = '" + Student_Card.GroupID + "' ORDER BY LastName_ukr";//SQL запит на отримання інформації
-        try {
-            PreparedStatement prSt = getConnection().prepareStatement(query);
-            resultSet = prSt.executeQuery();
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
-        }
-        return resultSet;
-    }
+//    public ResultSet StudentsPIB_2() {
+//        ResultSet resultSet = null;
+//        String query = "SELECT LastName_ukr, FirstName_ukr, Surname_ukr, IdFO FROM AnketaOfStudents where GroupID = '" + Studentcard_Controller.GroupID + "' ORDER BY LastName_ukr";//SQL запит на отримання інформації
+//        try {
+//            PreparedStatement prSt = getConnection().prepareStatement(query);
+//            resultSet = prSt.executeQuery();
+//        } catch (SQLException | IOException throwables) {
+//            throwables.printStackTrace();
+//        }
+//        return resultSet;
+//    }
 //
-    public ResultSet StudentsINFO() {
-        ResultSet resultSet = null;
-        String query = "SELECT LastName_ukr, FirstName_ukr, Surname_ukr, LastName_eng, FirstName_eng, Surname_eng, StudentBook, " +
-                "IdentificationCode, SeriesOfPassport, NumberOfPassport, DateOfBirth, IssuanceDateOfPassport, IdFO, Sex, UkrainianCitizenship, " +
-                "MaritalStatus, ObtainingDegree, FormOfTraining FROM AnketaOfStudents where IdFO = '" + Student_Card.ID_Student + "' ORDER BY LastName_ukr";//SQL запит на отримання інформації
-        try {
-            PreparedStatement prSt = getConnection().prepareStatement(query);
-            resultSet = prSt.executeQuery();
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
-        }
-        return resultSet;
-    }
+//    public ResultSet StudentsINFO() {
+//        ResultSet resultSet = null;
+//        String query = "SELECT LastName_ukr, FirstName_ukr, Surname_ukr, LastName_eng, FirstName_eng, Surname_eng, StudentBook, " +
+//                "IdentificationCode, SeriesOfPassport, NumberOfPassport, DateOfBirth, IssuanceDateOfPassport, IdFO, Sex, UkrainianCitizenship, " +
+//                "MaritalStatus, ObtainingDegree, FormOfTraining FROM AnketaOfStudents where IdFO = '" + Studentcard_Controller.ID_Student + "' ORDER BY LastName_ukr";//SQL запит на отримання інформації
+//        try {
+//            PreparedStatement prSt = getConnection().prepareStatement(query);
+//            resultSet = prSt.executeQuery();
+//        } catch (SQLException | IOException throwables) {
+//            throwables.printStackTrace();
+//        }
+//        return resultSet;
+//    }
 //
     public ResultSet Disc() {//Створення методу для отримання даних з бази даних
         ResultSet resultSet = null;
@@ -518,23 +521,23 @@ public class DataBase extends authentication {//Головний клас під
         return resultSet;
     }
 //
-    public void AddStudent() {
-        String query = "INSERT INTO AnketaOfStudents VALUES " + add_student.ID_FO +  ", " + add_student.sur_name_ukr + ", " + add_student.sur_name_eng
-                + "," + add_student.name_ukr +  "," + add_student.name_eng +  "," + add_student.father_ukr +  ","
-                + add_student.father_eng +  "," + add_student.name_ukr +  "," + add_student.professional_direction + ", " +
-                add_student.group + "," + add_student.year + "," + add_student.zalik_book + ", " +
-                add_student.ident + ", " + add_student.date_birth + ", " + add_student.nationality_student +
-                ", " + add_student.sex + ", " + add_student.marital + ", " + add_student.pass_ser + ", " +
-                add_student.pass_nam + ", " + add_student.pass_date + ", " + add_student.formStudy +
-                ", " + add_student.Osv_stupin + ", " + add_student.index + ", " + add_student.Oblast +
-                ", " + add_student.address + ", " + add_student.cost + ";";//SQL запит на отримання інформації
-        try {
-            PreparedStatement prSt = getConnection().prepareStatement(query);
-            prSt.executeUpdate();
-        } catch (SQLException | IOException throwables) {
-            throwables.printStackTrace();
-        }
-    }
+//    public void AddStudent() {
+//        String query = "INSERT INTO AnketaOfStudents VALUES " + Controller_Add_Student.ID_FO +  ", " + Controller_Add_Student.sur_name_ukr + ", " + Controller_Add_Student.sur_name_eng
+//                + "," + Controller_Add_Student.name_ukr +  "," + Controller_Add_Student.name_eng +  "," + Controller_Add_Student.father_ukr +  ","
+//                + Controller_Add_Student.father_eng +  "," + Controller_Add_Student.name_ukr +  "," + Controller_Add_Student.professional_direction + ", " +
+//                Controller_Add_Student.group + "," + Controller_Add_Student.year + "," + Controller_Add_Student.zalik_book + ", " +
+//                Controller_Add_Student.ident + ", " + Controller_Add_Student.date_birth + ", " + Controller_Add_Student.nationality_student +
+//                ", " + Controller_Add_Student.sex + ", " + Controller_Add_Student.marital + ", " + Controller_Add_Student.pass_ser + ", " +
+//                Controller_Add_Student.pass_nam + ", " + Controller_Add_Student.pass_date + ", " + Controller_Add_Student.formStudy +
+//                ", " + Controller_Add_Student.Osv_stupin + ", " + Controller_Add_Student.index + ", " + Controller_Add_Student.Oblast +
+//                ", " + Controller_Add_Student.address + ", " + Controller_Add_Student.cost + ";";//SQL запит на отримання інформації
+//        try {
+//            PreparedStatement prSt = getConnection().prepareStatement(query);
+//            prSt.executeUpdate();
+//        } catch (SQLException | IOException throwables) {
+//            throwables.printStackTrace();
+//        }
+//    }
 //
 //
 //
@@ -595,6 +598,37 @@ public class DataBase extends authentication {//Головний клас під
 ////            throwables.printStackTrace();
 ////        }
 ////    }
+    public ResultSet StudentID() {
+        ResultSet resultSet = null;
+        String query = "SELECT IdFO FROM AnketaOfStudents WHERE LastName_ukr = '" + EduProcess_Advanced_Del.P +"' and FirstName_ukr = '" + EduProcess_Advanced_Del.I + "' and Surname_ukr = '" + EduProcess_Advanced_Del.B + "';";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
+
+    public void InsertIntoTable() {
+        String query = "insert into EducationalPlan_Delet select * from EducationalPlan where EducationalPlan.IdOfStudent = '" + EduProcess_Advanced_Del.ID_FO + "' and EducationalPlan.NumberOfSemester = '" + EduProcess_Advanced_Del.ID_Sem + "' and EducationalPlan.DisciplineId = '"+ EduProcess_Advanced_Del.ID_Disc +"';";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            prSt.executeUpdate();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    public void DeleteIntoTable() {
+        String query = "delete from EducationalPlan where EducationalPlan.IdOfStudent = '" + EduProcess_Advanced_Del.ID_FO + "' and EducationalPlan.NumberOfSemester = '" + EduProcess_Advanced_Del.ID_Sem + "' and EducationalPlan.DisciplineId = '"+ EduProcess_Advanced_Del.ID_Disc +"';";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            prSt.executeUpdate();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 
 }
 

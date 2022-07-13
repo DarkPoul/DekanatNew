@@ -69,7 +69,6 @@ public class EduProcessCuration {
     @FXML
     private TableColumn<Table_Edu, String> plan_table_hours;
 
-
 // Змінні
 
     public static String GroupID;
@@ -104,6 +103,7 @@ public class EduProcessCuration {
 
     @FXML
     void initialize() throws SQLException {
+
 
         Discipline_for_Edu.clear();
 
@@ -335,10 +335,6 @@ public class EduProcessCuration {
                                         }
                                     } else Disc.get(nx).RGR.setValue("-");
 
-
-
-
-
                                     if (Objects.equals(StudentEdu_RS.getString("Coursework"), "0")){
                                         Disc.get(nx).KR.setSelected(true);
                                         Disc.get(nx).KP.setVisible(false);
@@ -372,8 +368,6 @@ public class EduProcessCuration {
             }
 
         });
-
-
 
 
         choose_session.setOnAction(actionEvent -> {
