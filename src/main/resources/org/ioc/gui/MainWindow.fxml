@@ -4,172 +4,216 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="MainWindow_anchor" focusTraversable="true" maxHeight="768.0" maxWidth="1024.0" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #a1d1a3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ioc.controller.MainWindow">
-    <children>
-        <Label alignment="TOP_CENTER" prefHeight="130.0" prefWidth="1024.0" text="Автоматизована система управлiння  навчальним процесом НТУ " textAlignment="CENTER" textFill="#03003c" wrapText="true">
-            <font>
-                <Font name="Arial Black" size="30.0" />
-            </font>
-        </Label>
-        <ImageView fitHeight="273.0" fitWidth="310.0" layoutX="582.0" layoutY="248.0">
-            <image>
-                <Image url="@../image/logo.png" />
-            </image>
-        </ImageView>
-        <VBox alignment="CENTER" layoutX="790.0" layoutY="714.0" prefHeight="40.0" prefWidth="220.0">
-            <children>
-                <Label fx:id="Dekanat_name" alignment="TOP_CENTER" prefHeight="30.0" prefWidth="220.0" text="FTIT" textAlignment="CENTER">
-                    <font>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #a1d1a3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Автоматизована система управлiння навчальним процесом НТУ " textAlignment="CENTER" wrappingWidth="1022.4501953125">
+               <font>
+                  <Font name="Arial Black" size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="60.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <GridPane prefHeight="620.0" prefWidth="1024.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="202.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="567.0" minHeight="10.0" prefHeight="517.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="273.0" fitWidth="310.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets bottom="70.0" left="90.0" />
+               </GridPane.margin>
+            </ImageView>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label fx:id="Dekanat_name" alignment="CENTER" prefHeight="30.0" prefWidth="220.0" textAlignment="CENTER">
+                     <font>
                         <Font name="Arial Black" size="20.0" />
-                    </font>
-                </Label>
-            </children>
-        </VBox>
-        <HBox layoutX="30.0" layoutY="194.0" prefHeight="380.0" prefWidth="417.0">
-            <children>
-                <VBox prefHeight="400.0" prefWidth="400.0">
-                    <children>
-                        <Button fx:id="Registration_of_students" alignment="CENTER" maxHeight="45.0" maxWidth="400.0" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Реєстрація зарахованих студентів" textAlignment="CENTER">
-                            <font>
-                                <Font name="Arial Bold" size="16.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <graphic>
-                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../image/people.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button fx:id="Support_of_the_educational_process" maxHeight="45.0" maxWidth="400.0" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Супровiд навчального процесу">
-                            <font>
-                                <Font name="Arial Bold" size="16.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                            <graphic>
-                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../image/document.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button fx:id="Making_changes_and_transferring_to_the_course" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Внесення змін та переведення на курс">
-                            <font>
-                                <Font name="Arial Bold" size="16.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                            <graphic>
-                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../image/document_edit.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button fx:id="View_and_print_information" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Перегляд та друк інформації">
-                            <font>
-                                <Font name="Arial Bold" size="16.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                            <graphic>
-                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../image/print.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button fx:id="Modular_control" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Модульний контроль">
-                            <font>
-                                <Font name="Arial Bold" size="16.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                            <graphic>
-                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../image/pencil.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button fx:id="Directory" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Довідник">
-                            <font>
-                                <Font name="Arial Bold" size="16.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                            <graphic>
-                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../image/ask.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button fx:id="Info" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Про розробників">
-                            <font>
-                                <Font name="Arial Bold" size="16.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                            <graphic>
-                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../image/info.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Separator prefWidth="200.0" />
-                        <Button minHeight="45.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Вихід">
-                            <font>
-                                <Font name="Arial Bold" size="16.0" />
-                            </font>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                            <graphic>
-                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../image/exit.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                    </children>
-                </VBox>
-            </children>
-        </HBox>
-    </children>
-</AnchorPane>
+                     </font>
+                     <HBox.margin>
+                        <Insets left="250.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="532.0" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="Registration_of_students" alignment="CENTER" maxHeight="45.0" maxWidth="400.0" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Реєстрація зарахованих студентів" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/people.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="70.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="Support_of_the_educational_process" maxHeight="45.0" maxWidth="400.0" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Супровiд навчального процесу">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/document.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="Making_changes_and_transferring_to_the_course" maxHeight="45.0" maxWidth="400.0" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Внесення змін та переведення на курс">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/document_edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="View_and_print_information" maxHeight="45.0" maxWidth="400.0" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Перегляд та друк інформації">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/print.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="Modular_control" maxHeight="45.0" maxWidth="400.0" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Модульний контроль">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/pencil.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="Directory" maxHeight="45.0" maxWidth="400.0" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Довідник">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/ask.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="Info" maxHeight="45.0" maxWidth="400.0" minHeight="45.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Про розробників">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/info.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button maxHeight="45.0" maxWidth="400.0" minHeight="45.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="45.0" prefWidth="400.0" style="-fx-border-color: #000000;" text="    Вихід">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/exit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="70.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <GridPane.margin>
+                  <Insets top="40.0" />
+               </GridPane.margin>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

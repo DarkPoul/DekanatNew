@@ -1,37 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="800.0" style="-fx-background-color: #a1d1a3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ioc.controller.EduProcess_Advanced_Add">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #a1d1a3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="187.99999618530273" minHeight="1.0" prefHeight="57.999996185302734" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="641.0" minHeight="10.0" prefHeight="589.0000038146973" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="364.66668701171875" minHeight="10.0" prefHeight="119.33331298828125" vgrow="SOMETIMES" />
+  </rowConstraints>
    <children>
-      <TableView fx:id="ListOfStudent_Advanced" editable="true" layoutX="14.0" layoutY="14.0" prefHeight="270.0" prefWidth="380.0" style="-fx-background-color: #a1d1a3; -fx-border-color: black;">
-        <columns>
-          <TableColumn fx:id="TableColumn_ListOfStudent" prefWidth="340.0" text="Список студентів" />
-            <TableColumn fx:id="TableColumn_CheckBox_Student" minWidth="0.0" prefWidth="36.0" text=" " />
-        </columns>
+      <TableView fx:id="ListOfStudent_Advanced" editable="true" prefHeight="270.0" prefWidth="380.0" style="-fx-background-color: #a1d1a3; -fx-border-color: black;" GridPane.rowIndex="1">
+         <columns>
+            <TableColumn fx:id="TableColumn_ListOfStudent" prefWidth="450.0" text="Список студентів" />
+            <TableColumn fx:id="TableColumn_CheckBox_Student" minWidth="0.0" prefWidth="28.0" text=" " />
+         </columns>
+         <GridPane.margin>
+            <Insets left="20.0" right="10.0" />
+         </GridPane.margin>
       </TableView>
-      <TableView fx:id="ListOfDisc_Advanced" layoutX="406.0" layoutY="14.0" prefHeight="270.0" prefWidth="380.0" style="-fx-background-color: #a1d1a3; -fx-border-color: black;">
-        <columns>
-          <TableColumn fx:id="TableColumn_ListOfDisc" prefWidth="340.0" text="Список дисциплін" />
-            <TableColumn fx:id="TableColumn_CheckBox_Disc" minWidth="0.0" prefWidth="32.0" text=" " />
-        </columns>
+      <TableView fx:id="ListOfDisc_Advanced" prefHeight="270.0" prefWidth="380.0" style="-fx-background-color: #a1d1a3; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <columns>
+            <TableColumn fx:id="TableColumn_ListOfDisc" prefWidth="450.0" text="Список дисциплін" />
+            <TableColumn fx:id="TableColumn_CheckBox_Disc" minWidth="0.0" prefWidth="28.0" text=" " />
+         </columns>
+         <GridPane.margin>
+            <Insets left="10.0" right="20.0" />
+         </GridPane.margin>
       </TableView>
-      <Button layoutX="706.0" layoutY="322.0" mnemonicParsing="false" onAction="#divers" text="Рознести" textAlignment="CENTER">
+      <Button fx:id="Button_SelectAllStudent" mnemonicParsing="false" prefHeight="35.0" prefWidth="185.0" text="Вибрати всіх студентів" textAlignment="CENTER" GridPane.rowIndex="2">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font size="14.0" />
          </font>
+         <GridPane.margin>
+            <Insets bottom="50.0" left="50.0" />
+         </GridPane.margin>
       </Button>
-      <Button fx:id="Button_SelectAllStudent" layoutX="14.0" layoutY="292.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="180.0" text="Вибрати всіх студентів" textAlignment="CENTER">
+      <Button fx:id="Button_SelectAllDisc" mnemonicParsing="false" prefHeight="35.0" prefWidth="185.0" text="Вибрати всі дисципліни" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <font>
             <Font size="14.0" />
-         </font></Button>
-      <Button fx:id="Button_SelectAllDisc" layoutX="406.0" layoutY="292.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="180.0" text="Вибрати всі дисципліни" textAlignment="CENTER">
-         <font>
-            <Font size="14.0" />
-         </font></Button>
+         </font>
+         <GridPane.margin>
+            <Insets bottom="50.0" left="50.0" />
+         </GridPane.margin>
+      </Button>
+      <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button mnemonicParsing="false" onAction="#divers" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #4682B4;" text="Рознести" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" right="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
    </children>
-</AnchorPane>
+</GridPane>
