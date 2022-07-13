@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #a1d1a3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ioc.controller.view_and_print">
+   <children>
+      <HBox layoutX="52.0" layoutY="62.0" prefHeight="637.0" prefWidth="730.0">
+         <children>
+            <TableView prefHeight="514.0" prefWidth="722.0">
+              <columns>
+                <TableColumn fx:id="Surname_printing" prefWidth="164.94542694091797" text="Прізвище" />
+                <TableColumn fx:id="Name_printing" prefWidth="181.5272216796875" text="Ім'я" />
+                  <TableColumn fx:id="Secondname_printing" prefWidth="203.34555053710938" text="По батькові" />
+                  <TableColumn fx:id="rating_paper_printing" prefWidth="174.54541015625" text="№ Залікової книжки" />
+              </columns>
+            </TableView>
+            <Slider orientation="VERTICAL" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="51.0" layoutY="12.0" prefHeight="33.0" prefWidth="716.0" spacing="20.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Виберіть групу" />
+            <ChoiceBox fx:id="Group_printing" prefWidth="150.0" />
+            <ChoiceBox fx:id="Form_education_printing" prefWidth="150.0" />
+            <Button fx:id="scholarship_printing" mnemonicParsing="false" text="Розмір стипендії" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="809.0" layoutY="62.0" prefHeight="304.0" prefWidth="108.0" spacing="20.0">
+         <children>
+            <Button fx:id="Export_printing" mnemonicParsing="false" text="Експорт додатку" />
+            <ChoiceBox fx:id="Level_studing" prefWidth="150.0" />
+            <Button fx:id="Rating_printing" mnemonicParsing="false" text="Оцінки додатку" />
+            <Button fx:id="journal_printing" mnemonicParsing="false" text="Імпрот Журнал" />
+            <Button fx:id="To_exel" mnemonicParsing="false" text="В Exel" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

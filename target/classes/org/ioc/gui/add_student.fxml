@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ioc.controller.add_student">
+  <tabs>
+    <Tab fx:id="tabank" style="-fx-font-size: 12.4; -fx-font-family: ArialBlack;" text="Анкетні дані">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: a1d1a3; -fx-font-size: 12; -fx-font-family: Arial Black;">
+               <children>
+                  <VBox layoutY="75.0" prefHeight="106.0" prefWidth="1024.0">
+                     <children>
+                        <HBox prefHeight="70.0" prefWidth="1024.0" spacing="30.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="56.0" prefWidth="240.0">
+                                 <children>
+                                    <HBox prefHeight="30.0" prefWidth="100.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Прізвище (Укр)" textAlignment="CENTER" wrappingWidth="60.0" />
+                                          <TextField fx:id="Surname_ukr" prefHeight="26.0" prefWidth="180.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="30.0" prefWidth="100.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Прізвище (Анг)" textAlignment="CENTER" wrappingWidth="60.0" />
+                                          <TextField fx:id="Surname_eng" prefHeight="26.0" prefWidth="180.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="56.0" prefWidth="230.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="30.0" prefWidth="262.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ім'я (Укр)" textAlignment="CENTER" wrappingWidth="50.0" />
+                                          <TextField fx:id="Name_ukr" prefHeight="26.0" prefWidth="180.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="30.0" prefWidth="200.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ім'я (англ)" textAlignment="CENTER" wrappingWidth="50.0" />
+                                          <TextField fx:id="Name_eng" prefHeight="26.0" prefWidth="180.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="60.0" prefWidth="234.0">
+                                 <children>
+                                    <HBox prefHeight="30.0" prefWidth="180.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="По-батькові (Укр)" textAlignment="CENTER" wrappingWidth="70.0" />
+                                          <TextField fx:id="First_name_ukr" prefHeight="26.0" prefWidth="180.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="30.0" prefWidth="180.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="По-батькові (англ)" textAlignment="CENTER" wrappingWidth="70.0" />
+                                          <TextField fx:id="First_name_eng" prefHeight="26.0" prefWidth="180.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="56.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox prefHeight="26.0" prefWidth="129.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Стать" textAlignment="CENTER" wrappingWidth="90.0" />
+                                          <ChoiceBox fx:id="Sex" prefHeight="26.0" prefWidth="105.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="26.0" prefWidth="274.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Сімейний стан" textAlignment="CENTER" wrappingWidth="90.0" />
+                                          <ChoiceBox fx:id="Marital_status" prefHeight="26.0" prefWidth="105.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="28.0" prefWidth="684.0" spacing="5.0">
+                           <children>
+                              <Separator orientation="VERTICAL" prefHeight="28.0" prefWidth="27.0" visible="false" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Дата народження">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin></Text>
+                              <DatePicker fx:id="Date_of_birth" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Text fx:id="studentcard" layoutX="428.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Учбова картка нового студента:" />
+                  <HBox alignment="CENTER" layoutY="2.0" prefHeight="40.0" prefWidth="1024.0" style="-fx-background-color: #FFFFFF;" />
+                  <VBox layoutX="66.0" layoutY="253.0" prefHeight="210.0" prefWidth="318.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="272.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Паспорт Серія №" wrappingWidth="135.0" />
+                              <TextField fx:id="Passport_series" prefHeight="26.0" prefWidth="40.0" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                              <TextField fx:id="Pasport_number" prefHeight="26.0" prefWidth="134.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="232.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Виданий" wrappingWidth="135.0" />
+                              <DatePicker fx:id="Date_of_issued" prefWidth="180.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="310.0" spacing="5.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Індентифікаційний №" wrappingWidth="130.0" />
+                              <TextField fx:id="Identify_number" prefHeight="26.0" prefWidth="180.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="262.0" spacing="5.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Залікова книжка №" wrappingWidth="130.0" />
+                              <TextField fx:id="Gradebook" prefHeight="26.0" prefWidth="180.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="319.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID фізичної особи" wrappingWidth="135.0" />
+                              <TextField fx:id="Person_ID" prefWidth="180.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="512.0" layoutY="282.0" prefHeight="280.0" prefWidth="363.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="30.0" prefWidth="363.0" spacing="5.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Освітня програма" wrappingWidth="145.0" />
+                              <ChoiceBox fx:id="Professional_direction" prefHeight="26.0" prefWidth="215.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="363.0" spacing="5.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Курс" wrappingWidth="145.0" />
+                              <ChoiceBox fx:id="Course" prefHeight="26.0" prefWidth="215.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </ChoiceBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="363.0" spacing="5.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Група" wrappingWidth="145.0" />
+                              <ChoiceBox fx:id="Group_Choice" prefHeight="26.0" prefWidth="120.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                                      </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                              <CheckBox fx:id="Technical_school" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="16.0" prefWidth="104.0" text="Технікум" textAlignment="JUSTIFY" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="363.0" spacing="5.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Рік" wrappingWidth="140.0">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ChoiceBox fx:id="Year" prefHeight="26.0" prefWidth="213.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </ChoiceBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="363.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Форма навчання:" wrappingWidth="102.0" />
+                              <ChoiceBox fx:id="Form_of_education" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="120.0" />
+                                 </HBox.margin></ChoiceBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="31.0" prefWidth="363.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Освітній ступінь" wrappingWidth="150.0" />
+                              <ChoiceBox fx:id="Educational_level" prefHeight="26.0" prefWidth="216.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="363.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Умова зарахування" wrappingWidth="150.0" />
+                              <ChoiceBox fx:id="Enrollment_conditions" prefHeight="26.0" prefWidth="363.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="363.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="За кошти" wrappingWidth="150.0" />
+                              <ChoiceBox fx:id="Enrollment_conditions_for" prefHeight="26.0" prefWidth="363.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="67.0" layoutY="496.0" prefHeight="180.0" prefWidth="315.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="305.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Національність" wrappingWidth="145.0" />
+                              <ChoiceBox fx:id="Nationality" prefHeight="30.0" prefWidth="305.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="305.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Номер тел" wrappingWidth="145.0" />
+                              <TextField fx:id="Telephone_number" prefHeight="26.0" prefWidth="180.0">
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="305.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Область" wrappingWidth="145.0" />
+                              <ChoiceBox fx:id="Region" prefHeight="26.0" prefWidth="180.0">
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding>
+                              </ChoiceBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="305.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Район. домашня адреса:" wrappingWidth="145.0" />
+                              <TextField fx:id="Home_address" prefHeight="26.0" prefWidth="180.0">
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding></TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="305.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Індекс" wrappingWidth="145.0" />
+                              <TextField fx:id="Index" prefHeight="26.0" prefWidth="180.0">
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding></TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Button fx:id="add_student" layoutX="910.0" layoutY="693.0" mnemonicParsing="false" text="Зберегти данні" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets right="10.0" />
+               </opaqueInsets></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

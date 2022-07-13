@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="800.0" style="-fx-background-color: #a1d1a3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ioc.controller.EduProcess_Advanced_Add">
+   <children>
+      <TableView fx:id="ListOfStudent_Advanced" editable="true" layoutX="14.0" layoutY="14.0" prefHeight="270.0" prefWidth="380.0" style="-fx-background-color: #a1d1a3; -fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="TableColumn_ListOfStudent" prefWidth="340.0" text="Список студентів" />
+            <TableColumn fx:id="TableColumn_CheckBox_Student" minWidth="0.0" prefWidth="36.0" text=" " />
+        </columns>
+      </TableView>
+      <TableView fx:id="ListOfDisc_Advanced" layoutX="406.0" layoutY="14.0" prefHeight="270.0" prefWidth="380.0" style="-fx-background-color: #a1d1a3; -fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="TableColumn_ListOfDisc" prefWidth="340.0" text="Список дисциплін" />
+            <TableColumn fx:id="TableColumn_CheckBox_Disc" minWidth="0.0" prefWidth="32.0" text=" " />
+        </columns>
+      </TableView>
+      <Button layoutX="706.0" layoutY="322.0" mnemonicParsing="false" onAction="#divers" text="Рознести" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Button_SelectAllStudent" layoutX="14.0" layoutY="292.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="180.0" text="Вибрати всіх студентів" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="Button_SelectAllDisc" layoutX="406.0" layoutY="292.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="180.0" text="Вибрати всі дисципліни" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

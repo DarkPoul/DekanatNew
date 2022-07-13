@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: a1d1a3; -fx-background-size: 12.4; -fx-font-family: ArialBlack;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ioc.controller.Entering_estimates_from_the_information">
+   <children>
+      <Text layoutX="442.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Введення оцінок в відомості" wrappingWidth="222.39997280152397" />
+      <HBox layoutX="277.0" layoutY="73.0" prefHeight="599.0" prefWidth="710.0">
+         <children>
+            <TableView fx:id="TableView_EnteringMark" prefHeight="599.0" prefWidth="730.0">
+              <columns>
+                <TableColumn fx:id="column_full_name" prefWidth="148.0" text="П.І.Б" />
+                  <TableColumn fx:id="column_RGR" prefWidth="136.0" text="Вид контролю" />
+                  <TableColumn fx:id="column_date" prefWidth="48.0" text="Дата" />
+                  <TableColumn fx:id="column_statment" prefWidth="64.0" text="Відомості" />
+                  <TableColumn fx:id="column_ECTS" prefWidth="47.0" style="-fx-alignment: CENTER;" text="ECTS" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </HBox>
+      <ComboBox fx:id="choose_semester" layoutX="159.0" layoutY="73.0" prefHeight="26.0" prefWidth="111.0" promptText="Сесія" />
+      <ComboBox fx:id="choose_group" layoutX="14.0" layoutY="73.0" prefHeight="26.0" prefWidth="142.0" promptText="Спеціальність" />
+      <ComboBox fx:id="choose_discipline" layoutX="14.0" layoutY="107.0" prefHeight="26.0" prefWidth="257.0" promptText="Дисципліна" />
+      <DatePicker fx:id="choose_date" layoutX="14.0" layoutY="173.0" prefHeight="26.0" prefWidth="110.0" promptText="Дата" />
+      <Button fx:id="assign_date_to_all" layoutX="132.0" layoutY="173.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="140.0" text="Присвоїти всім дату" />
+      <TextField fx:id="statment_number_textfield" layoutX="14.0" layoutY="206.0" maxWidth="220.0" prefHeight="26.0" prefWidth="110.0" promptText="Номер відомості" />
+      <Button fx:id="convert_to_ECTS" layoutX="84.0" layoutY="239.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Перевести в ECTS" />
+      <Button fx:id="assign_number_to_all" layoutX="132.0" layoutY="206.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="140.0" text="Присвоїти всім номер" />
+      <Button fx:id="save_grades" layoutX="821.0" layoutY="678.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="165.0" text="Зберегти зміни" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="TypeOfControl" layoutX="14.0" layoutY="141.0" prefHeight="25.0" prefWidth="257.0" promptText="Вид контролю" />
+   </children>
+</AnchorPane>
