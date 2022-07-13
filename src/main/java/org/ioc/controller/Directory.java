@@ -1,10 +1,13 @@
 package org.ioc.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.ioc.database.DataBase;
 import org.ioc.model.*;
@@ -45,13 +48,10 @@ public class Directory {
     private TableColumn<Table_Discipline, String> FulNameOfDiscipline;
 
     @FXML
-    private ComboBox<?> SearchDepartment;
+    private TextField SearchDepartment;
 
     @FXML
-    private ComboBox<?> SearchDiscipline;
-
-    @FXML
-    private ComboBox<?> SearchName;
+    private TextField SearchDiscipline;
 
 
     @FXML

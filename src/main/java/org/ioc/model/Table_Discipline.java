@@ -33,4 +33,8 @@ public class Table_Discipline {
     public void setNameUkr(String nameUkr) {
         NameUkr = nameUkr;
     }
+
+    public String getNameOfDisc() {
+        return null;
+    }
 }

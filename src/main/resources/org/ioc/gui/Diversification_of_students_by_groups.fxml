@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #a1d1a3; -fx-font-family: ArialBlack; -fx-font-size: 12.4;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ioc.controller.Diversification_of_students_by_groups">
+   <children>
+      <HBox alignment="CENTER_RIGHT" layoutX="30.0" layoutY="23.0" prefHeight="54.0" prefWidth="975.0" spacing="65.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="54.0" prefWidth="160.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ступінь" />
+                  <ChoiceBox fx:id="degree_panel" prefHeight="26.0" prefWidth="160.0" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="54.0" prefWidth="160.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Форма навчання" />
+                  <ChoiceBox fx:id="FormOfStudy" prefWidth="160.0" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="54.0" prefWidth="160.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Назва спеціальності" />
+                  <ChoiceBox fx:id="Spec_ID_Name" prefHeight="26.0" prefWidth="160.0" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="54.0" prefWidth="160.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Рік вступу" />
+                  <ChoiceBox fx:id="Year_of_entry" prefHeight="28.0" prefWidth="160.0" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="11.0" layoutY="155.0" prefHeight="520.0" prefWidth="1005.0">
+         <children>
+            <TableView fx:id="Student_Table" editable="true" prefHeight="520.0" prefWidth="1005.0">
+              <columns>
+                  <TableColumn fx:id="Individual_ID" maxWidth="50000.0" prefWidth="122.0" resizable="false" text="ID фізичної особи" />
+                <TableColumn fx:id="Surname_of_Student" maxWidth="50000.0" prefWidth="223.0" resizable="false" text="Прізвище" />
+                <TableColumn fx:id="Name_of_Student" maxWidth="1000.0" prefWidth="232.0" resizable="false" text="Ім'я" />
+                  <TableColumn fx:id="Lastname_of_Student" maxWidth="1000.0" prefWidth="296.0" resizable="false" text="По-батькові" />
+                  <TableColumn fx:id="CheckBoxForStudent" prefWidth="131.0" resizable="false" text="Занести студента" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="31.0" layoutY="82.0" prefHeight="72.0" prefWidth="984.0" spacing="20.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="54.0" prefWidth="154.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Назва групи" />
+                  <ChoiceBox fx:id="Name_of_Group" prefHeight="26.0" prefWidth="180.0" />
+               </children>
+               <HBox.margin>
+                  <Insets right="700.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="72.0" prefWidth="117.0">
+               <children>
+                  <Button fx:id="Search_student" mnemonicParsing="false" prefHeight="28.0" prefWidth="82.0" text="Пошук" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="GroupToStudent_to_DB" layoutX="882.0" layoutY="679.0" mnemonicParsing="false" text="Рознести студентів" />
+   </children>
+</AnchorPane>

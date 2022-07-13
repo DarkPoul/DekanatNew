@@ -24,6 +24,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
+import org.ioc.App;
 import org.ioc.database.DataBase;
 
 
@@ -180,49 +181,27 @@ public class Registration_of_enrolled_students {
         });
 
         Diversification_of_students_into_groups.setOnAction(actionEvent -> {
-//            Stage Directory = new Stage();
-//            Directory.setTitle("Рознесення студентів по группам");
-//            Directory.initModality(Modality.APPLICATION_MODAL);
-//            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Diversification_of_students_by_groups.fxml"));
-//            Scene scene = null;
-//            try {
-//                scene = new Scene(fxmlLoader.load(), 1024, 768);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//            Directory.setScene(scene);
-//            Directory.showAndWait();
+            try {
+                App.setRoot("gui/Diversification_of_students_by_groups");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         });
 
         CreateGroup_Button.setOnAction(actionEvent -> {
-//            Stage Directory = new Stage();
-//            Directory.setTitle("Створити групу");
-//            Directory.initModality(Modality.APPLICATION_MODAL);
-//            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Creating_group.fxml"));
-//            Scene scene = null;
-//
-//            try {
-//                scene = new Scene(fxmlLoader.load(), 400, 200);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//            Directory.setScene(scene);
-//            Directory.showAndWait();
+            try {
+                App.setRoot("gui/Creating_group");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         });
 
         AddNewStudent_Button.setOnAction(actionEvent -> {
-//            Stage Directory = new Stage();
-//            Directory.setTitle("Додати нового студента");
-//            Directory.initModality(Modality.APPLICATION_MODAL);
-//            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("add_student.fxml"));
-//            Scene scene = null;
-//            try {
-//                scene = new Scene(fxmlLoader.load(), 1024, 768);
-//            } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
-//            Directory.setScene(scene);
-//            Directory.showAndWait();
+            try {
+                App.setRoot("gui/add_student");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         });
 
     }
