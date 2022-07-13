@@ -9,13 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="2af9ea4d-b5aa-462f-aaf0-4ebbde398a22" name="Changes" comment="13.07 S_varog">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcessCuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcessCuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcess_Advanced_Del.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/controller/EduProcess_Advanced_Del.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ioc/database/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/authentication.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/ioc/gui/authentication.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ioc/controller/EduProcessCuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ioc/controller/EduProcessCuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ioc/controller/EduProcess_Advanced_Del.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ioc/controller/EduProcess_Advanced_Del.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ioc/database/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ioc/database/DataBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ioc/gui/authentication.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ioc/gui/authentication.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +33,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
