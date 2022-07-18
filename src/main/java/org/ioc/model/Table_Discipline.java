@@ -1,16 +1,16 @@
 package org.ioc.model;
 
 public class Table_Discipline {
-    int IdDep, IdDisc;
-    String NameUkr;
+    int IdDisc;
+    String NameUkr, IdDep;
 
     public Table_Discipline(int IdDep, int IdDisc, String NameUkr) {
-        this.IdDep = IdDep;
+        this.IdDep = String.valueOf(IdDep);
         this.IdDisc = IdDisc;
         this.NameUkr = NameUkr;
     }
 
-    public int getIdDep() {
+    public String getIdDep() {
         return IdDep;
     }
 
@@ -23,7 +23,7 @@ public class Table_Discipline {
     }
 
     public void setIdDep(int idDep) {
-        IdDep = idDep;
+        IdDep = String.valueOf(idDep);
     }
 
     public void setIdDisc(int idDisc) {
@@ -34,7 +34,4 @@ public class Table_Discipline {
         NameUkr = nameUkr;
     }
 
-    public String getNameOfDisc() {
-        return null;
-    }
 }

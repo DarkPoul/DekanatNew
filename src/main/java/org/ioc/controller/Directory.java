@@ -127,6 +127,11 @@ public class Directory {
         DataBase dataBaseHandler3 = new DataBase();
         ResultSet DisciplineID_DepartmentID_FullName = dataBaseHandler3.Directory_Info_Discipline();
         ObservableList<Table_Discipline> DisciplineID_And_DepartmentID_And_FullName = FXCollections.observableArrayList();
+
+        NumberOfDepartment.setCellValueFactory(new PropertyValueFactory<>("IdDep"));
+        NumberOfDiscipline.setCellValueFactory(new PropertyValueFactory<>("IdDisc"));
+        FulNameOfDiscipline.setCellValueFactory(new PropertyValueFactory<>("NameUkr"));
+
         while (true) {//Запускаємо цикл на обробку даних отриманих з бази даних
             try {
                 if (!DisciplineID_DepartmentID_FullName.next()) break;
@@ -138,11 +143,34 @@ public class Directory {
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-            NumberOfDepartment.setCellValueFactory(new PropertyValueFactory<>("IdDep"));
-            NumberOfDiscipline.setCellValueFactory(new PropertyValueFactory<>("IdDisc"));
-            FulNameOfDiscipline.setCellValueFactory(new PropertyValueFactory<>("NameUkr"));
             Table_Discipline.setItems(DisciplineID_And_DepartmentID_And_FullName);
         }
+        FilteredList<Table_Discipline> Filter = new FilteredList<>(DisciplineID_And_DepartmentID_And_FullName, b -> true);
+        SearchDiscipline.textProperty().addListener((observable, oldValue, newValue )-> Filter.setPredicate(Table_Discipline -> {
+            if (newValue == null || newValue.isEmpty()) {
+                return true;
+            }
+            String LowerCase = newValue.toLowerCase();
+            return Table_Discipline.getNameUkr().toLowerCase().contains(LowerCase);
+        }));
+        SortedList<Table_Discipline> sortedData = new SortedList<>(Filter);
+        sortedData.comparatorProperty().bind(Table_Discipline.comparatorProperty());
+        Table_Discipline.setItems(sortedData);
+
+//        FilteredList<Table_Discipline> Filter2 = new FilteredList<>(DisciplineID_And_DepartmentID_And_FullName, b -> true);
+//        SearchDepartment.textProperty().addListener((observable, oldValue, newValue )-> Filter2.setPredicate(Table_Discipline -> {
+//            if (newValue == null || newValue.isEmpty()) {
+//                return true;
+//            }
+//            String LowerCase = newValue.toLowerCase();
+//            return Table_Discipline.getIdDep().toLowerCase().contains(LowerCase);
+//        }));
+//        SortedList<Table_Discipline> sortedData2 = new SortedList<>(Filter2);
+//        sortedData.comparatorProperty().bind(Table_Discipline.comparatorProperty());
+//        Table_Discipline.setItems(sortedData2);
+
+
+
 
         DataBase dataBaseHandler4 = new DataBase();
         ResultSet SpecialityId_Name = dataBaseHandler4.Directory_Info_Speciality();
