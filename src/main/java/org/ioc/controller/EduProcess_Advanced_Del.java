@@ -162,7 +162,7 @@ public class EduProcess_Advanced_Del {
             }
 
         }
-        ObservableList<String> ID = FXCollections.observableArrayList();
+        ObservableList<Table_Edu_Advanced_Student> ID = FXCollections.observableArrayList();
         for (String student : Student) {
             P = student.split(" ")[0];
             I = student.split(" ")[1];
@@ -180,7 +180,7 @@ public class EduProcess_Advanced_Del {
                 }
                 try {
                     id_fo = id_fo_rs.getString("IdFO");
-                    ID.add(id_fo);
+                    ID.add(new Table_Edu_Advanced_Student(id_fo));
                 } catch (SQLException throwables) {
                     throwables.printStackTrace();
                 }
@@ -189,34 +189,39 @@ public class EduProcess_Advanced_Del {
         ObservableList<Table_Edu_Advanced_Disc> Disc = ListOfDisc_Advanced.getItems();
         List<String> DiscIdForSql = new LinkedList<>();
         for (Table_Edu_Advanced_Disc s : Disc) {
-            NameOfDisc_SQL = s.getDisc_String();
-            ResultSet IdOfDisc = db.DiscID();
-            try {
-                if (!IdOfDisc.next()) break;
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-            String str11 = null;
-            try {
-                str11 = IdOfDisc.getString("DisciplineId");
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-            DiscIdForSql.add(0, str11);
-            System.out.println(str11);
-        }
-
-        for (String student : ID){
-            ID_FO = student;
-            ID_Sem =NumberOfSession;
-            for (String s : DiscIdForSql) {
-                ID_Disc = s;
-                db.InsertIntoTable();
-                db.DeleteIntoTable();
+            if (s.getDisc_CheckBox().isSelected()){
+                NameOfDisc_SQL = s.getDisc_String();
+                ResultSet IdOfDisc = db.DiscID();
+                try {
+                    if (!IdOfDisc.next()) break;
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+                String str11 = null;
+                try {
+                    str11 = IdOfDisc.getString("DisciplineId");
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+                DiscIdForSql.add(str11);
+                System.out.println(str11);
             }
         }
 
-
+        for (Table_Edu_Advanced_Student student : ID){
+            System.out.println(student.getStudent_Check().isSelected());
+            if (student.getStudent_Check().isSelected()){
+                ID_FO = student.getStudent_String();
+                ID_Sem =NumberOfSession;
+                System.out.println("ggg");
+                for (String s : DiscIdForSql) {
+                    ID_Disc = s;
+                    //db.InsertIntoTable();
+                    //db.DeleteIntoTable();
+                    System.out.println("True");
+                }
+            }
+        }
     }
 }
 

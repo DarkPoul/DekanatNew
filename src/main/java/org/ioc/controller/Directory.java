@@ -157,21 +157,6 @@ public class Directory {
         sortedData.comparatorProperty().bind(Table_Discipline.comparatorProperty());
         Table_Discipline.setItems(sortedData);
 
-//        FilteredList<Table_Discipline> Filter2 = new FilteredList<>(DisciplineID_And_DepartmentID_And_FullName, b -> true);
-//        SearchDepartment.textProperty().addListener((observable, oldValue, newValue )-> Filter2.setPredicate(Table_Discipline -> {
-//            if (newValue == null || newValue.isEmpty()) {
-//                return true;
-//            }
-//            String LowerCase = newValue.toLowerCase();
-//            return Table_Discipline.getIdDep().toLowerCase().contains(LowerCase);
-//        }));
-//        SortedList<Table_Discipline> sortedData2 = new SortedList<>(Filter2);
-//        sortedData.comparatorProperty().bind(Table_Discipline.comparatorProperty());
-//        Table_Discipline.setItems(sortedData2);
-
-
-
-
         DataBase dataBaseHandler4 = new DataBase();
         ResultSet SpecialityId_Name = dataBaseHandler4.Directory_Info_Speciality();
         ObservableList<Table_Speciality> SpecialityId_And_Name = FXCollections.observableArrayList();

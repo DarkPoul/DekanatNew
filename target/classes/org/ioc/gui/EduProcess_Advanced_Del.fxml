@@ -47,14 +47,6 @@
             <Insets bottom="50.0" left="50.0" />
          </GridPane.margin>
       </Button>
-      <Button fx:id="Button_SelectAllDisc" mnemonicParsing="false" prefHeight="35.0" prefWidth="185.0" text="Вибрати всі дисципліни" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
-         <font>
-            <Font size="14.0" />
-         </font>
-         <GridPane.margin>
-            <Insets bottom="50.0" left="50.0" />
-         </GridPane.margin>
-      </Button>
       <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
             <Button mnemonicParsing="false" onAction="#divers" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #CD5C5C;" text="Вилучити" textAlignment="CENTER" textFill="WHITE">
@@ -67,5 +59,13 @@
             </Button>
          </children>
       </VBox>
+      <Button fx:id="Button_SelectAllDisc" mnemonicParsing="false" prefHeight="35.0" prefWidth="185.0" text="Вибрати всі дисципліни" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="50.0" left="50.0" />
+         </GridPane.margin>
+      </Button>
    </children>
 </GridPane>
