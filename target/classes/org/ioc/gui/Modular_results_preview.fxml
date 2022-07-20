@@ -1,34 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Spinner?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a1d1a3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ioc.controller.Modular_results_preview">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #a1d1a3;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="org.ioc.controller.Modular_results_preview">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="337.0" minWidth="10.0" prefWidth="107.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="743.0" minWidth="10.0" prefWidth="693.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="10.0" prefWidth="107.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="554.0" minHeight="10.0" prefHeight="554.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="184.0" minHeight="10.0" prefHeight="101.0" vgrow="SOMETIMES" />
+  </rowConstraints>
    <children>
-      <Text layoutX="34.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Факультет" />
-      <Text layoutX="34.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Група" />
-      <Text layoutX="32.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Вид конторлю" />
-      <Text layoutX="406.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Семестр" />
-      <Text layoutX="35.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Друкувати:" />
-      <ChoiceBox fx:id="choose_faculty" layoutX="32.0" layoutY="38.0" prefHeight="24.0" prefWidth="426.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" />
-      <ChoiceBox fx:id="choose_group" layoutX="32.0" layoutY="107.0" prefHeight="24.0" prefWidth="236.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" />
-      <ChoiceBox fx:id="choose_control_type" layoutX="32.0" layoutY="176.0" prefHeight="24.0" prefWidth="492.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" />
-      <Spinner fx:id="choose_semester" layoutX="409.0" layoutY="107.0" prefHeight="24.0" prefWidth="66.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" />
-      <RadioButton layoutX="222.0" layoutY="215.0" mnemonicParsing="false" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="По групі" />
-      <RadioButton layoutX="222.0" layoutY="240.0" mnemonicParsing="false" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="По факультету" />
-      <Button fx:id="students_with_unsatisfying_results" layoutX="19.0" layoutY="346.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="547.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Студенти, що мають незадовільні результати" />
-      <Button fx:id="schedule" layoutX="19.0" layoutY="290.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="91.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Графік" />
-      <Button fx:id="table" layoutX="114.0" layoutY="290.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="96.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Таблиця" />
-      <Button fx:id="exit" layoutX="458.0" layoutY="297.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="107.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Вихід" />
-      <Button fx:id="departments" layoutX="458.0" layoutY="260.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="107.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Кафеди" />
-      <Button fx:id="faculties" layoutX="422.0" layoutY="221.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="143.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Факультети" />
-      <Button fx:id="not_inputed_data" layoutX="214.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Не введені дані" />
-      <Button fx:id="consolidated_table" layoutX="214.0" layoutY="272.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Зведена таблиця" />
-      <Button fx:id="general_table_button" layoutX="19.0" layoutY="247.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="164.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Загальна табл." />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Факультет" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="500.0" left="98.0" />
+         </GridPane.margin>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Група" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="370.0" left="98.0" />
+         </GridPane.margin>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Вид конторлю" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="240.0" left="98.0" />
+         </GridPane.margin>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Семестр" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="370.0" left="378.0" />
+         </GridPane.margin>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Друкувати:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="105.0" />
+         </GridPane.margin>
+      </Text>
+      <ChoiceBox fx:id="choose_faculty" prefHeight="24.0" prefWidth="426.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="440.0" left="98.0" />
+         </GridPane.margin>
+      </ChoiceBox>
+      <ChoiceBox fx:id="choose_group" prefHeight="24.0" prefWidth="236.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="310.0" left="98.0" />
+         </GridPane.margin>
+      </ChoiceBox>
+      <ChoiceBox fx:id="choose_control_type" prefHeight="24.0" prefWidth="492.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="180.0" left="98.0" />
+         </GridPane.margin>
+      </ChoiceBox>
+      <Spinner fx:id="choose_semester" prefHeight="24.0" prefWidth="66.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="310.0" left="378.0" />
+         </GridPane.margin>
+      </Spinner>
+      <RadioButton mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="По групі" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="100.0" left="319.0" top="10.0" />
+         </GridPane.margin>
+      </RadioButton>
+      <RadioButton mnemonicParsing="false" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="По факультету" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="50.0" left="319.0" top="10.0" />
+         </GridPane.margin>
+      </RadioButton>
+      <Button fx:id="students_with_unsatisfying_results" mnemonicParsing="false" prefHeight="30.0" prefWidth="547.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Студенти, що мають незадовільні результати" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="98.0" top="300.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="schedule" mnemonicParsing="false" prefHeight="49.0" prefWidth="91.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Графік" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="98.0" top="180.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="table" mnemonicParsing="false" prefHeight="49.0" prefWidth="96.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Таблиця" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="198.0" top="180.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="departments" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Кафеди" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="508.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="faculties" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Факультети" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="80.0" left="508.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="not_inputed_data" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Не введені дані" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="310.0" top="215.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="consolidated_table" mnemonicParsing="false" prefHeight="30.0" prefWidth="236.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Зведена таблиця" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="310.0" top="130.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="general_table_button" mnemonicParsing="false" prefHeight="30.0" prefWidth="164.0" style="-fx-font-family: ArialBlack; -fx-font-size: 16;" text="Загальна таблиця" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="98.0" top="70.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onKeyPressed="#return_back" prefHeight="40.0" prefWidth="50.0">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="40.0">
+               <image>
+                  <Image url="@../image/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" />
+         </GridPane.margin>
+      </Button>
    </children>
-</AnchorPane>
+</GridPane>

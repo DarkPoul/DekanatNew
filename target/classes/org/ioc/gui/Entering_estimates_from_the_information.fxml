@@ -38,11 +38,12 @@
       <TextField fx:id="statment_number_textfield" layoutX="14.0" layoutY="206.0" maxWidth="220.0" prefHeight="26.0" prefWidth="110.0" promptText="Номер відомості" />
       <Button fx:id="convert_to_ECTS" layoutX="84.0" layoutY="239.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Перевести в ECTS" />
       <Button fx:id="assign_number_to_all" layoutX="132.0" layoutY="206.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="140.0" text="Присвоїти всім номер" />
-      <Button fx:id="save_grades" layoutX="821.0" layoutY="678.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="165.0" text="Зберегти зміни" textAlignment="CENTER">
+      <Button fx:id="save_grades" layoutX="821.0" layoutY="678.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="165.0" style="-fx-background-color: #20B2AA;" text="Зберегти зміни" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="12.0" />
          </font>
       </Button>
       <ComboBox fx:id="TypeOfControl" layoutX="14.0" layoutY="141.0" prefHeight="25.0" prefWidth="257.0" promptText="Вид контролю" />
+      <Button fx:id="return_back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #3CB371;" text="Повернутися назад" textFill="WHITE" />
    </children>
 </AnchorPane>

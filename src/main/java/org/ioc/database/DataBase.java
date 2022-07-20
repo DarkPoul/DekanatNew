@@ -18,6 +18,7 @@ public class DataBase extends authentication {//Головний клас під
 
     public static boolean True_connection;
 
+
     public static void Open_DB() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");//підключення драйверу
@@ -493,6 +494,18 @@ public class DataBase extends authentication {//Головний клас під
     public ResultSet StudentsPIB() {
         ResultSet resultSet = null;
         String query = "SELECT LastName_ukr, FirstName_ukr, Surname_ukr, IdFO FROM AnketaOfStudents where GroupID = '" + EduProcessCuration.GroupID + "' ORDER BY LastName_ukr";//SQL запит на отримання інформації
+        try {
+            PreparedStatement prSt = getConnection().prepareStatement(query);
+            resultSet = prSt.executeQuery();
+        } catch (SQLException | IOException throwables) {
+            throwables.printStackTrace();
+        }
+        return resultSet;
+    }
+
+    public ResultSet StudentsByG() {
+        ResultSet resultSet = null;
+        String query = "SELECT LastName_ukr, FirstName_ukr, Surname_ukr, IdFO FROM AnketaOfStudents where GroupID = '" + for_next_course.GroupID + "' ORDER BY LastName_ukr";//SQL запит на отримання інформації
         try {
             PreparedStatement prSt = getConnection().prepareStatement(query);
             resultSet = prSt.executeQuery();
